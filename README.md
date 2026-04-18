@@ -1,18 +1,24 @@
-
-````markdown
 # DegenResolve - ONT Sequencing Data Analyzer
 
 [![Release](https://img.shields.io/badge/Release-v1.0.0-blue)](https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/v1.0.0)
 
 ## 🚀 Latest Release (v1.0.0 – Offline Bundle)
+
 **DegenResolve ONT Sequencing Data Analyzer**  
-Version: v1.0.0 – Offline Installer Bundle  
-👉 https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/v1.0.0
+📦 Version: v1.0.0 – Offline Installer Bundle  
+
+🔗 Release Page:  
+https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/v1.0.0  
+
+---
 
 A fully self-contained offline installer is available for systems without internet access.
 
-### 📦 Bundle Information
-- **Archive**: `/home/shoaibsaikat/Pictures/degenresolve_offline_bundle_1.0.0.tar.gz`
+---
+
+## 📦 Bundle Information
+
+- **Archive**: `degenresolve_offline_bundle_1.0.0.tar.gz`
 - **Size**: ~1.2 GB  
 - **Includes**:
   - Pre-configured Conda environment
@@ -22,7 +28,7 @@ A fully self-contained offline installer is available for systems without intern
 
 ---
 
-## ⚙️ Installation (Offline)
+### ⚙️ Installation (Offline)
 
 ### 1. Transfer the bundle
 Copy the archive to the target machine (USB, SCP, etc.)
@@ -47,9 +53,9 @@ After installation, you should see output similar to:
 ```
 ⚠ Installed with 1 warning(s) — see above.
 
-Application : /home/shoaibsaikat/degenresolve
-Launcher    : /home/shoaibsaikat/degenresolve/run_degenresolve.sh
-Conda env   : /home/shoaibsaikat/miniconda3/envs/degenresolve
+Application : /home//degenresolve
+Launcher    : /home/user/degenresolve/run_degenresolve.sh
+Conda env   : /home/user/miniconda3/envs/degenresolve
 Verified    : 14 passed, 1 warnings
 ```
 
@@ -58,7 +64,7 @@ Verified    : 14 passed, 1 warnings
 ## ▶️ Run Application
 
 ```bash
-bash /home/shoaibsaikat/degenresolve/run_degenresolve.sh
+bash /home/user/degenresolve/run_degenresolve.sh
 ```
 
 ### Reload environment (if needed)
@@ -72,7 +78,7 @@ source ~/.bashrc
 ## 🧹 Uninstall
 
 ```bash
-bash /home/shoaibsaikat/APP/degenresolve_bundle/uninstall.sh
+bash /home/user/APP/degenresolve_bundle/uninstall.sh
 ```
 
 ---
@@ -85,25 +91,6 @@ bash /home/shoaibsaikat/APP/degenresolve_bundle/uninstall.sh
 * Dynamic configuration support
 * Comprehensive logging system
 * Cross-platform Linux/WSL support
-
----
-
-## ⚡ Quick Start (Development Mode)
-
-### GUI Launch
-
-```bash
-python3 degenresolve.py
-# OR
-bash quick_launch.sh
-```
-
-### Install as package
-
-```bash
-pip install -e .
-degenresolve
-```
 
 ---
 
@@ -195,7 +182,7 @@ python -m pytest tests/
 **Shoaib Saikat**
 Research Intern, One Health Laboratory
 ICDDRB, Bangladesh
-MS Student, University of Barishal
+MS in Biochemistry and Biotechnology, University of Barishal
 
 ---
 
