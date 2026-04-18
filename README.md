@@ -1,166 +1,206 @@
+
+````markdown
 # DegenResolve - ONT Sequencing Data Analyzer
 
-A modular, comprehensive application for processing ONT raw FASTQ files and generating refined consensus FASTA sequences.
+[![Release](https://img.shields.io/badge/Release-v1.0.0-blue)](https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/v1.0.0)
 
-## Features
+## 🚀 Latest Release (v1.0.0 – Offline Bundle)
+**DegenResolve ONT Sequencing Data Analyzer**  
+Version: v1.0.0 – Offline Installer Bundle  
+👉 https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/v1.0.0
 
-- **Modular Architecture**: Clean separation of GUI, pipeline, and utility components
-- **Checkpoint System**: Automatically detects completed steps and resumes from interruptions 🔄
-- **Dynamic Configuration**: Flexible parameter adjustment for analysis
-- **Real-time Progress Tracking**: Live updates during processing
-- **Comprehensive Logging**: Detailed logs and result management
-- **Cross-platform Support**: Works on Linux and WSL environments
+A fully self-contained offline installer is available for systems without internet access.
 
-## Quick Start
+### 📦 Bundle Information
+- **Archive**: `/home/shoaibsaikat/Pictures/degenresolve_offline_bundle_1.0.0.tar.gz`
+- **Size**: ~1.2 GB  
+- **Includes**:
+  - Pre-configured Conda environment
+  - All Python dependencies
+  - Required bioinformatics tools (samtools, bcftools, minimap2, porechop, etc.)
+  - Fully integrated pipeline + GUI
 
-### GUI Application
+---
+
+## ⚙️ Installation (Offline)
+
+### 1. Transfer the bundle
+Copy the archive to the target machine (USB, SCP, etc.)
+
+### 2. Extract
 ```bash
-# Simple launch
-python3 degenresolve.py
+tar -xzf degenresolve_offline_bundle_1.0.0.tar.gz
+````
 
-# Or use the quick launcher
+### 3. Run installer
+
+```bash
+bash degenresolve_bundle/install.sh
+```
+
+---
+
+## ✅ Post-Installation Summary
+
+After installation, you should see output similar to:
+
+```
+⚠ Installed with 1 warning(s) — see above.
+
+Application : /home/shoaibsaikat/degenresolve
+Launcher    : /home/shoaibsaikat/degenresolve/run_degenresolve.sh
+Conda env   : /home/shoaibsaikat/miniconda3/envs/degenresolve
+Verified    : 14 passed, 1 warnings
+```
+
+---
+
+## ▶️ Run Application
+
+```bash
+bash /home/shoaibsaikat/degenresolve/run_degenresolve.sh
+```
+
+### Reload environment (if needed)
+
+```bash
+source ~/.bashrc
+```
+
+---
+
+## 🧹 Uninstall
+
+```bash
+bash /home/shoaibsaikat/APP/degenresolve_bundle/uninstall.sh
+```
+
+---
+
+## ✨ Features
+
+* Modular architecture (GUI + pipeline separation)
+* Automatic checkpoint/resume system 🔄
+* Real-time progress tracking
+* Dynamic configuration support
+* Comprehensive logging system
+* Cross-platform Linux/WSL support
+
+---
+
+## ⚡ Quick Start (Development Mode)
+
+### GUI Launch
+
+```bash
+python3 degenresolve.py
+# OR
 bash quick_launch.sh
 ```
 
-### Package Installation
-```bash
-# Install in development mode
-pip install -e .
+### Install as package
 
-# Then run anywhere
+```bash
+pip install -e .
 degenresolve
 ```
 
-## Project Structure
+---
+
+## 📂 Project Structure
 
 ```
 DegenResolve/
-├── src/degenresolve/           # Main package source
-│   ├── gui/                    # GUI components
-│   │   ├── main_window.py      # Main application window
-│   │   ├── results_viewer.py   # Results display widget
-│   │   └── styles.py           # UI themes and styling
-│   ├── core/                   # Core functionality
-│   │   ├── config.py           # Configuration management
-│   │   ├── validator.py        # Input validation
-│   │   └── signals.py          # Qt signals
-│   ├── pipeline/               # Pipeline processing
-│   │   ├── processor.py        # Main pipeline coordinator
-│   │   ├── worker.py           # Background worker
-│   │   └── consensus_editor.py # Consensus sequence editing
-│   ├── utils/                  # Utility functions
-│   │   ├── logging.py          # Logging utilities
-│   │   └── file_utils.py       # File management
-│   └── scripts/                # Shell scripts
-│       ├── main_with_config.sh # Main pipeline script
-│       └── *.sh                # Other pipeline scripts
-├── tests/                      # Test suite
-├── docs/                       # Documentation
-├── requirements.txt            # Python dependencies
-├── setup.py                   # Package setup
-└── degenresolve.py            # Main launcher
+├── src/degenresolve/
+│   ├── gui/
+│   ├── core/
+│   ├── pipeline/
+│   ├── utils/
+│   └── scripts/
+├── tests/
+├── docs/
+├── requirements.txt
+├── setup.py
+└── degenresolve.py
 ```
 
-## Dependencies
+---
 
-- Python 3.8+
-- PyQt5 (GUI framework)
-- BioPython (sequence analysis)
-- pysam (BAM file handling)
-- System tools: samtools, bcftools, minimap2, porechop
+## 📥 Input Format
 
-## Usage
-
-### Expected Input Structure
 ```
 your_data_directory/
 ├── fastq_pass/
 │   ├── barcode01/
-│   │   └── *.fastq.gz
 │   └── barcode02/
-│       └── *.fastq.gz
 └── reference/
     └── reference.fasta
 ```
 
-### Configuration
+---
 
-The application supports both GUI-based configuration and JSON config files. Configuration includes:
-
-- Coverage thresholds
-- Degeneracy resolution parameters
-- Ploidy settings
-- Variant calling parameters
-- Quality control options
-
-### Output
-
-Results are organized in a step-based structure for easy navigation:
+## 📤 Output Structure
 
 ```
 results/
-├── step_1_merged/           # barcode*_merged.fastq
-├── step_2_trimmed/          # barcode*_trimmed.fastq
-├── step_3_mapped/           # barcode*.sam
-├── step_4_processed/        # barcode*/ (BAM, coverage, variants)
-├── step_5_consensus/        # barcode*_consensus.fasta
-│   └── fastq/               # barcode*_consensus.fastq
-├── step_6_edited/           # barcode*_consensus_edited.fasta
-├── quality_reports/         # barcode*/ (QC reports)
-└── final_outputs/           # barcode*_consensus_edited.fasta
+├── step_1_merged/
+├── step_2_trimmed/
+├── step_3_mapped/
+├── step_4_processed/
+├── step_5_consensus/
+├── step_6_edited/
+├── quality_reports/
+└── final_outputs/
 ```
 
-**Key locations:**
-- `results/final_outputs/`: Main consensus results
-- `log/`: Processing logs and diagnostics
-
-See `ORGANIZED_RESULTS_STRUCTURE.md` for detailed explanation.
+---
 
 ## 🔄 Checkpoint System
 
-The pipeline includes an intelligent checkpoint system that automatically detects completed steps:
+The pipeline automatically resumes from the last completed step:
 
-### **Automatic Resume**
-```bash
-# If pipeline is interrupted, simply restart - it will resume automatically
-python3 degenresolve.py  # GUI mode
-# OR
-bash src/degenresolve/scripts/main_with_config.sh pipeline_config.json  # CLI mode
-```
+* Detects existing outputs
+* Skips completed steps
+* Prevents recomputation
+* Handles interruptions safely
 
-### **Step Detection**
-The system checks for completion of each step:
-- **Step 1**: `results/step_1_merged/barcode*_merged.fastq`
-- **Step 2**: `results/step_2_trimmed/barcode*_trimmed.fastq` 
-- **Step 3**: `results/step_3_mapped/barcode*.sam`
-- **Step 4**: `results/step_4_processed/barcode*/barcode*.bam` + index
-- **Step 5**: `results/step_5_consensus/barcode*_consensus.fasta` + FASTQ
-- **Step 6**: `results/step_6_edited/barcode*_consensus_edited.fasta`
+---
 
-### **Benefits**
-✅ **Time Saving**: Skip completed computations  
-✅ **Fault Tolerance**: Automatic recovery from interruptions  
-✅ **Resource Efficiency**: Only process what's needed  
-✅ **Flexible Workflow**: Resume from any completed step
+## 🧪 Development & Testing
 
-## Development
-
-### Running Tests
 ```bash
 python -m pytest tests/
 ```
 
-### Code Style
-The project follows PEP 8 conventions with modular design principles.
+---
 
-## Author
+## 🧬 Dependencies
+
+* Python ≥ 3.8
+* PyQt5
+* BioPython
+* pysam
+
+### System tools
+
+* samtools
+* bcftools
+* minimap2
+* porechop
+
+---
+
+## 👤 Author
 
 **Shoaib Saikat**
-- Research Intern, One Health Laboratory, Infectious Diseases Division
-- International Centre for Diarrhoeal Disease Research, Bangladesh (icddr,b)
-- MS Student, Department of Biochemistry and Biotechnology
-- University of Barishal, Bangladesh
+Research Intern, One Health Laboratory
+ICDDRB, Bangladesh
+MS Student, University of Barishal
 
-## License
+---
+
+## 📜 License
 
 This project is developed for research purposes at icddr,b.
+
+```
