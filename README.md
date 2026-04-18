@@ -1,6 +1,6 @@
 # DegenResolve - ONT Sequencing Data Analyzer
 
-[![Release](https://img.shields.io/badge/Release-v1.0.0-blue)](https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-blue)](https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/degenresolve)
 
 ## 🚀 Latest Release (v1.0.0 – Offline Bundle)
 
@@ -8,7 +8,7 @@
 📦 Version: v1.0.0 – Offline Installer Bundle  
 
 🔗 Release Page:  
-https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/v1.0.0  
+https://github.com/Shoaib-Saikat/DeGenRESOLVE-ONT-Sequencing-Data-Analyzer/releases/tag/degenresolve  
 
 ---
 
@@ -31,7 +31,7 @@ A fully self-contained offline installer is available for systems without intern
 ### ⚙️ Installation (Offline)
 
 ### 1. Transfer the bundle
-Copy the archive to the target machine (USB, SCP, etc.)
+Download and copy the archive to the target machine (through USB, SCP, etc.)
 
 ### 2. Extract
 ```bash
