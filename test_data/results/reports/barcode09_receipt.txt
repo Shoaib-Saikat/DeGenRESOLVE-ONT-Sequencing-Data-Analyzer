@@ -1,0 +1,53 @@
+DeGenRESOLVE run receipt - barcode09
+params md5    : 29a055a5e70421fd12ed1cb4d921cf1c
+reference md5 : 00cb9e0c1a7fffb69be5c31801fd8191
+config md5    : 0b337c4ff3fe330a5ac2640aa19b303d
+basecall model: dna_r10.4.1_e8.2_400bps_hac@v4.3.0 (19473/19473 reads)
+mpileup       : basecall_tier=hac
+mpileup       : detected_tier=hac
+mpileup       : force_sup_profile=false
+mpileup       : mpileup_flags=-B -Q 5 --max-BQ 30 -I
+mpileup       : bcftools_version=1.24
+resolver -Q   : 5 (floored at 5; counts reads, cannot down-weight)
+environment   : c13a6b841038b386cd3648787a572d3f
+                (full package inventory: results/reports/environment_manifest.txt)
+version check : DIFFERS
+  samtools: samtools 1.24
+  bcftools: bcftools 1.24
+  minimap2: 2.31-r1302
+  porechop: 0.2.4
+  python: Python 3.10.21
+  pysam: 0.24.0
+--- effective parameters ---
+  app_version=1.0.0
+  degeneracy_threshold=20
+  filter_mode=influenza
+  force_sup_profile=false
+  homopolymer_min_length=5
+  homopolymer_window=5
+  indel_custom_percentage=50.0
+  indel_deletions=equal_or_more
+  indel_insertions=equal_or_more
+  max_base_quality=auto
+  min_base_quality=auto
+  min_coverage=100
+  ploidy=2
+  read_end_edge_fraction=0.1
+  read_end_threshold=0.8
+  reference_file=infA_references.fasta
+  reference_md5=00cb9e0c1a7fffb69be5c31801fd8191
+  strand_balance_threshold=0.1
+  strict_homopolymer=false
+  strict_read_end=false
+  strict_strand_bias=false
+  variant_call_depth=10000
+  variant_call_mode=c
+--- scope A checksums (md5, records only) ---
+merged.fastq      2992b5e0555760343dffaed3872447d2
+trimmed.fastq     e22deb550a4c921fba162e13a7bda906
+sam (records)     d308db8b64d10a139250d5df731b1821
+bam (records)     09aa078a21aa0f625da81f8d9a31cf91
+vcf (records)     8a94a7456a977fe10eee1c5488b0a0e2
+draft consensus   3e8a217123e5f0ab1a2f168edc98125e
+edited consensus  a6e1303e64847ceb51c6a33ce2ce96a4
+diagnostic log    59d12f1069ac95cab4af90d796e14e3e

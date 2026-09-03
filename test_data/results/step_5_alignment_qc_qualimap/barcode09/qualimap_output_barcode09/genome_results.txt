@@ -1,0 +1,164 @@
+BamQC report
+-----------------------------------
+
+>>>>>>> Input
+
+     bam file = ./temp_barcode09/barcode09.bam
+     outfile = ./temp_barcode09/qualimap_output_barcode09/genome_results.txt
+
+
+>>>>>>> Reference
+
+     number of bases = 60,057 bp
+     number of contigs = 37
+
+
+>>>>>>> Globals
+
+     number of windows = 433
+
+     number of reads = 19,444
+     number of mapped reads = 63 (0.32%)
+     number of supplementary alignments = 5 (0.03%)
+     number of secondary alignments = 0
+
+     number of mapped bases = 39,373 bp
+     number of sequenced bases = 38,565 bp
+     number of aligned bases = 0 bp
+     number of duplicated reads (estimated) = 22
+     duplication rate = 14.63%
+
+
+>>>>>>> Insert size
+
+     mean insert size = 0
+     std insert size = 0
+     median insert size = 0
+
+
+>>>>>>> Mapping quality
+
+     mean mapping quality = 8.7721
+
+
+>>>>>>> ACTG content
+
+     number of A's = 11,908 bp (30.88%)
+     number of C's = 7,478 bp (19.39%)
+     number of T's = 9,412 bp (24.41%)
+     number of G's = 9,767 bp (25.33%)
+     number of N's = 0 bp (0%)
+
+     GC percentage = 44.72%
+
+
+>>>>>>> Mismatches and indels
+
+    general error rate = 0.1224
+    number of mismatches = 0
+    number of insertions = 314
+    mapped reads with insertion percentage = 93.65%
+    number of deletions = 529
+    mapped reads with deletion percentage = 95.24%
+    homopolymer indels = 34.99%
+
+
+>>>>>>> Coverage
+
+     mean coverageData = 0.6556X
+     std coverageData = 2.1091X
+
+     There is a 14.49% of reference with a coverageData >= 1X
+     There is a 10.99% of reference with a coverageData >= 2X
+     There is a 8.05% of reference with a coverageData >= 3X
+     There is a 7.01% of reference with a coverageData >= 4X
+     There is a 6.57% of reference with a coverageData >= 5X
+     There is a 4.28% of reference with a coverageData >= 6X
+     There is a 2.44% of reference with a coverageData >= 7X
+     There is a 1.92% of reference with a coverageData >= 8X
+     There is a 1.74% of reference with a coverageData >= 9X
+     There is a 1.44% of reference with a coverageData >= 10X
+     There is a 1.43% of reference with a coverageData >= 11X
+     There is a 1.42% of reference with a coverageData >= 12X
+     There is a 1.36% of reference with a coverageData >= 13X
+     There is a 1.07% of reference with a coverageData >= 14X
+     There is a 0% of reference with a coverageData >= 15X
+     There is a 0% of reference with a coverageData >= 16X
+     There is a 0% of reference with a coverageData >= 17X
+     There is a 0% of reference with a coverageData >= 18X
+     There is a 0% of reference with a coverageData >= 19X
+     There is a 0% of reference with a coverageData >= 20X
+     There is a 0% of reference with a coverageData >= 21X
+     There is a 0% of reference with a coverageData >= 22X
+     There is a 0% of reference with a coverageData >= 23X
+     There is a 0% of reference with a coverageData >= 24X
+     There is a 0% of reference with a coverageData >= 25X
+     There is a 0% of reference with a coverageData >= 26X
+     There is a 0% of reference with a coverageData >= 27X
+     There is a 0% of reference with a coverageData >= 28X
+     There is a 0% of reference with a coverageData >= 29X
+     There is a 0% of reference with a coverageData >= 30X
+     There is a 0% of reference with a coverageData >= 31X
+     There is a 0% of reference with a coverageData >= 32X
+     There is a 0% of reference with a coverageData >= 33X
+     There is a 0% of reference with a coverageData >= 34X
+     There is a 0% of reference with a coverageData >= 35X
+     There is a 0% of reference with a coverageData >= 36X
+     There is a 0% of reference with a coverageData >= 37X
+     There is a 0% of reference with a coverageData >= 38X
+     There is a 0% of reference with a coverageData >= 39X
+     There is a 0% of reference with a coverageData >= 40X
+     There is a 0% of reference with a coverageData >= 41X
+     There is a 0% of reference with a coverageData >= 42X
+     There is a 0% of reference with a coverageData >= 43X
+     There is a 0% of reference with a coverageData >= 44X
+     There is a 0% of reference with a coverageData >= 45X
+     There is a 0% of reference with a coverageData >= 46X
+     There is a 0% of reference with a coverageData >= 47X
+     There is a 0% of reference with a coverageData >= 48X
+     There is a 0% of reference with a coverageData >= 49X
+     There is a 0% of reference with a coverageData >= 50X
+     There is a 0% of reference with a coverageData >= 51X
+
+
+>>>>>>> Coverage per contig
+
+	H1_MH393827.1	1777	0	0.0	0.0
+	H2_NC_007374.1	1773	162	0.09137055837563451	0.2873343566667469
+	H3_NC_007366.1	1762	0	0.0	0.0
+	H4_MN209301.1	1713	0	0.0	0.0
+	H5_OP023667.1	1751	3310	1.8903483723586523	2.351266571807165
+	H6_MN253646.1	1744	0	0.0	0.0
+	H7_NC_026425.1	1708	0	0.0	0.0
+	H8_MT090424.1	1718	0	0.0	0.0
+	H9_NC_004908.1	1714	0	0.0	0.0
+	H10_MH071504.1	1703	0	0.0	0.0
+	H11_MT090343.1	1735	0	0.0	0.0
+	H12_MK978984.1	1727	0	0.0	0.0
+	H13_MN783529.1	1717	0	0.0	0.0
+	H14_MN431050.1	1707	0	0.0	0.0
+	H15_MF145787.1	1762	0	0.0	0.0
+	H16_MW872254.1	1758	0	0.0	0.0
+	H17_CY103892.1	1784	0	0.0	0.0
+	H18_KR077932.1	1769	0	0.0	0.0
+	N1_NC_007361.1	1458	5435	3.7277091906721536	2.2490833061704856
+	N1_OR467201.1	1371	544	0.3967906637490883	0.484593657555925
+	N1_PV668490.1	1438	0	0.0	0.0
+	N2_ON497150.1	1439	1919	1.3335649756775538	2.4255292981097645
+	N3_MW404536.1	1452	0	0.0	0.0
+	N4_MT090426.1	1437	0	0.0	0.0
+	N5_MK978994.1	1452	0	0.0	0.0
+	N6_MH071489.1	1452	0	0.0	0.0
+	N7_MK345670.1	1433	0	0.0	0.0
+	N8_MG042104.1	1435	0	0.0	0.0
+	N9_NC_026429.1	1398	0	0.0	0.0
+	N10_CY103894.1	1390	0	0.0	0.0
+	N11_KR077934.1	1416	0	0.0	0.0
+	PB2_OP023708.1	2292	2168	0.9458987783595113	1.576020591072339
+	PB1_OP028538.1	2289	223	0.09742245522062036	0.29653215751315504
+	PA_OP023666.1	2176	2242	1.0303308823529411	1.4461853981707715
+	NP_OM938209.1	1540	4506	2.925974025974026	1.1906555551616402
+	MP_OP023633.1	1002	6861	6.847305389221557	1.2834304175446116
+	NS_OP023561.1	865	12003	13.876300578034682	0.6930623785707037
+
+

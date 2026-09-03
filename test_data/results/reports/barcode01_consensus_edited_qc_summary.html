@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>QC Summary</title>
+<style>
+body { font-family: sans-serif; margin: 2em; }
+table { border-collapse: collapse; margin: 1em 0; }
+th, td { border: 1px solid #ccc; padding: 6px 12px; text-align: left; }
+th { background: #f4f4f4; }
+h1 { font-size: 1.4em; } h2 { font-size: 1.1em; }
+</style></head><body>
+<h1>DeGenRESOLVE QC Summary</h1>
+<p>Generated: 2026-08-31 20:43:37</p>
+<p>Consensus: ./barcode01_consensus.fasta<br>BAM: temp_barcode01/barcode01.bam<br>Reference: ./reference/infA_references.fasta</p>
+<h2>Overall</h2>
+<table><tr><th>Metric</th><th>Value</th></tr><tr><td>Total Sites Examined</td><td>556</td></tr><tr><td>Resolved To Dominant Base</td><td>220</td></tr><tr><td>Retained As Iupac</td><td>164</td></tr><tr><td>Converted To Indel</td><td>0</td></tr><tr><td>Retained Low Coverage</td><td>172</td></tr><tr><td>Retained Strict Mode Revert</td><td>0</td></tr><tr><td>Retained Allele Set Conflict</td><td>0</td></tr><tr><td>Sites Unaccounted For</td><td>0</td></tr><tr><td>Flagged Strand Bias</td><td>0</td></tr><tr><td>Flagged Homopolymer</td><td>23</td></tr><tr><td>Flagged Read End Enrichment</td><td>16</td></tr></table>
+<h2>Coverage</h2>
+<p>Raw column depth vs. base-quality-filtered (usable) depth. <b>min_coverage is judged
+against the usable depth</b>, not the raw depth.</p>
+<table><tr><th>Stat</th><th>Raw depth</th><th>Usable depth</th></tr><tr><td>min</td><td>35</td><td>29</td></tr><tr><td>max</td><td>8668</td><td>8400</td></tr><tr><td>median</td><td>273</td><td>257</td></tr><tr><td>mean</td><td>724.8</td><td>685.5</td></tr></table>
+<h2>Per Segment</h2>
+<table><tr><th>Segment</th><th>Total</th><th>Resolved</th><th>Kept</th><th>Strand Bias</th><th>Homopolymer</th><th>Read-End</th></tr><tr><td>H9_NC_004908.1</td><td>154</td><td>58</td><td>96</td><td>0</td><td>9</td><td>8</td></tr><tr><td>N2_ON497150.1</td><td>72</td><td>70</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>PB2_OP023708.1</td><td>67</td><td>11</td><td>56</td><td>0</td><td>2</td><td>0</td></tr><tr><td>PB1_OP028538.1</td><td>92</td><td>18</td><td>74</td><td>0</td><td>3</td><td>5</td></tr><tr><td>PA_OP023666.1</td><td>96</td><td>17</td><td>79</td><td>0</td><td>5</td><td>0</td></tr><tr><td>MP_OP023633.1</td><td>11</td><td>11</td><td>0</td><td>0</td><td>1</td><td>1</td></tr><tr><td>NP_OM938209.1</td><td>36</td><td>8</td><td>28</td><td>0</td><td>0</td><td>0</td></tr><tr><td>NS_OP023561.1</td><td>28</td><td>27</td><td>1</td><td>0</td><td>3</td><td>1</td></tr></table>
+</body></html>

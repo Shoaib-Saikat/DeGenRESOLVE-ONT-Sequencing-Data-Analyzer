@@ -1,0 +1,5 @@
+basecall_tier=hac
+detected_tier=hac
+force_sup_profile=false
+mpileup_flags=-B -Q 5 --max-BQ 30 -I
+bcftools_version=1.24

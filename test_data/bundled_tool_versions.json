@@ -1,0 +1,21 @@
+{
+  "bundle_date": "2026-08-25T07:42:52Z",
+  "app_version": "1.0.0",
+  "python": "Python 3.10.21",
+  "samtools": "samtools 1.24",
+  "bcftools": "bcftools 1.24",
+  "vcfutils.pl": "bundled with bcftools 1.24",
+  "minimap2": "2.31-r1302",
+  "seqtk": "Version: 1.5-r133",
+  "porechop": "0.2.4",
+  "qualimap": "v.2.2.2-dev",
+  "java": "openjdk version 25.0.2-internal 2026-01-20",
+  "NanoPlot": "NanoPlot 1.47.2",
+  "pysam": "0.24.0",
+  "biopython": "1.88",
+  "numpy": "2.2.6",
+  "cyvcf2": "0.34.0",
+  "PyQt5": "5.15.11",
+  "PyQtWebEngine": "available",
+  "markdown-it-py": "4.2.0"
+}

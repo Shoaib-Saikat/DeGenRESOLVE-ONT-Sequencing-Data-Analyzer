@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DeGenRESOLVE - Run Summary</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1a2332;
+    color: #e0e6ef;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.page-wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+header {
+    background: linear-gradient(135deg, #1e3a5f, #2980b9);
+    border-radius: 10px 10px 0 0;
+    padding: 28px 32px;
+}
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+header h1 { font-size: 26px; font-weight: 700; color: #fff; }
+header .sub { color: #a8d4f5; font-size: 13px; margin-top: 6px; }
+.badge {
+    display: inline-block;
+    background: #f59e0b;
+    color: #1a2332;
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.card {
+    background: #243447;
+    border-radius: 8px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    border: 1px solid #2d4560;
+}
+.card-header {
+    background: linear-gradient(90deg, #1e3a5f, #243447);
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #5dade2;
+    border-bottom: 1px solid #2d4560;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card-header .icon { font-size: 18px; }
+.card-body { padding: 18px 20px; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th {
+    background: #1e2f44;
+    color: #7fb3d3;
+    padding: 9px 14px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #2d4560;
+}
+td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #2a3d55;
+    vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #2a3d55; }
+a { color: #a0b4c4; text-decoration: none; }
+a:hover { color: #e0e8f0; text-decoration: underline; }
+.val { color: #7dcea0; font-weight: 600; font-family: monospace; }
+.warn-val { color: #f39c12; font-weight: 600; }
+.good { color: #27ae60; }
+.bad  { color: #e74c3c; }
+.changed { color: #f39c12; }
+.unchanged { color: #7fb3d3; }
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+}
+.stat-box {
+    background: #1e2f44;
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-align: center;
+    border: 1px solid #2d4560;
+}
+.stat-box .num {
+    font-size: 24px;
+    font-weight: 700;
+    color: #5dade2;
+    display: block;
+}
+.stat-box .lbl {
+    font-size: 11px;
+    color: #7fb3d3;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+details { margin: 0; }
+details summary {
+    cursor: pointer; color: #5dade2; font-weight: 600;
+    font-size: 13px; padding: 6px 0; list-style: none;
+}
+details summary::before { content: "> "; }
+details[open] summary::before { content: "v "; }
+.link-list { list-style: none; }
+.link-list li { margin: 6px 0; }
+.link-list a {
+    color: #a0b4c4;
+    text-decoration: none;
+    font-size: 13px;
+}
+.link-list a:hover { text-decoration: underline; color: #e0e8f0; }
+.pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.pill-green { background: #1a3d2b; color: #7dcea0; }
+.pill-blue  { background: #1a2f4a; color: #5dade2; }
+.pill-amber { background: #3d2e0a; color: #f39c12; }
+.pill-red   { background: #3d0f0f; color: #e74c3c; }
+.toc { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 0; padding: 12px 0; background: #1a2332; border-radius: 0 0 10px 10px; border-top: 1px solid #2d4560; }
+.toc a {
+    background: #1e3a5f;
+    color: #a8d4f5;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid #2d4560;
+}
+.toc a:hover { background: #2980b9; color: #fff; }
+footer {
+    text-align: center;
+    color: #4a6278;
+    font-size: 12px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #2d4560;
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+<header>
+  <h1>DeGenRESOLVE - Run Summary Report</h1>
+  <div class="sub">Generated: 2026-09-02 18:01:53 &nbsp;|&nbsp; DeGenRESOLVE v1.0.0</div>
+</header>
+<div class="card"><div class="card-header"><span class="icon"></span>All Samples Summary</div><div class="card-body"><table><thead><tr><th>Barcode</th><th>Status</th><th>Ambiguous bases</th><th>Resolved</th><th>Resolution rate</th><th>Mean depth (samtools)</th><th>Breadth ≥ 1×</th></tr></thead><tbody><tr><td><a href="barcode01_summary_report.html">barcode01</a></td><td><span class="pill pill-green">Complete</span></td><td>556</td><td>220</td><td>39.6%</td><td>634.6</td><td>87.0%</td></tr><tr><td><a href="barcode09_summary_report.html">barcode09</a></td><td><span class="pill pill-green">Complete</span></td><td>3766</td><td>0</td><td>0.0%</td><td>2.1</td><td>48.5%</td></tr></tbody></table></div></div>
+<footer>Generated by DeGenRESOLVE v1.0.0 &nbsp;-&nbsp; 2026-09-02 18:01:53</footer>
+</div>
+</body>
+</html>

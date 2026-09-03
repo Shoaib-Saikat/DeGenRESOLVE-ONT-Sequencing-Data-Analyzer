@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DeGenRESOLVE Report - barcode09</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1a2332;
+    color: #e0e6ef;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.page-wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+header {
+    background: linear-gradient(135deg, #1e3a5f, #2980b9);
+    border-radius: 10px 10px 0 0;
+    padding: 28px 32px;
+}
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+header h1 { font-size: 26px; font-weight: 700; color: #fff; }
+header .sub { color: #a8d4f5; font-size: 13px; margin-top: 6px; }
+.badge {
+    display: inline-block;
+    background: #f59e0b;
+    color: #1a2332;
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.card {
+    background: #243447;
+    border-radius: 8px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    border: 1px solid #2d4560;
+}
+.card-header {
+    background: linear-gradient(90deg, #1e3a5f, #243447);
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #5dade2;
+    border-bottom: 1px solid #2d4560;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card-header .icon { font-size: 18px; }
+.card-body { padding: 18px 20px; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th {
+    background: #1e2f44;
+    color: #7fb3d3;
+    padding: 9px 14px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #2d4560;
+}
+td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #2a3d55;
+    vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #2a3d55; }
+a { color: #a0b4c4; text-decoration: none; }
+a:hover { color: #e0e8f0; text-decoration: underline; }
+.val { color: #7dcea0; font-weight: 600; font-family: monospace; }
+.warn-val { color: #f39c12; font-weight: 600; }
+.good { color: #27ae60; }
+.bad  { color: #e74c3c; }
+.changed { color: #f39c12; }
+.unchanged { color: #7fb3d3; }
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+}
+.stat-box {
+    background: #1e2f44;
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-align: center;
+    border: 1px solid #2d4560;
+}
+.stat-box .num {
+    font-size: 24px;
+    font-weight: 700;
+    color: #5dade2;
+    display: block;
+}
+.stat-box .lbl {
+    font-size: 11px;
+    color: #7fb3d3;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+details { margin: 0; }
+details summary {
+    cursor: pointer; color: #5dade2; font-weight: 600;
+    font-size: 13px; padding: 6px 0; list-style: none;
+}
+details summary::before { content: "> "; }
+details[open] summary::before { content: "v "; }
+.link-list { list-style: none; }
+.link-list li { margin: 6px 0; }
+.link-list a {
+    color: #a0b4c4;
+    text-decoration: none;
+    font-size: 13px;
+}
+.link-list a:hover { text-decoration: underline; color: #e0e8f0; }
+.pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.pill-green { background: #1a3d2b; color: #7dcea0; }
+.pill-blue  { background: #1a2f4a; color: #5dade2; }
+.pill-amber { background: #3d2e0a; color: #f39c12; }
+.pill-red   { background: #3d0f0f; color: #e74c3c; }
+.toc { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 0; padding: 12px 0; background: #1a2332; border-radius: 0 0 10px 10px; border-top: 1px solid #2d4560; }
+.toc a {
+    background: #1e3a5f;
+    color: #a8d4f5;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid #2d4560;
+}
+.toc a:hover { background: #2980b9; color: #fff; }
+footer {
+    text-align: center;
+    color: #4a6278;
+    font-size: 12px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #2d4560;
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+<div class="sticky-nav">
+<header>
+  <h1>DeGenRESOLVE Analysis Report
+    <span class="badge">barcode09</span>
+  </h1>
+  <div class="sub">Generated: 2026-09-02 18:01:53 &nbsp;|&nbsp;
+       DeGenRESOLVE v1.0.0 &nbsp;|&nbsp;
+       Reference: infA_references.fasta</div>
+</header>
+<div class="toc"><a href="#s0">Parameters</a><a href="#s1">Input Files</a><a href="#s2">NanoPlot QC</a><a href="#s3">Qualimap</a><a href="#s4">Segment Selection</a><a href="#s5">Coverage</a><a href="#s6">Degeneracy</a><a href="#s7">Indels</a><a href="#s8">Consensus</a><a href="#s9">Outputs</a><a href="#s10">Versions</a></div>
+</div>
+<div id="s0"><div class="card"><div class="card-header"><span class="icon"></span>Analysis Parameters</div><div class="card-body"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Minimum Coverage Threshold</td><td><span class="val">100</span></td></tr><tr><td>Degeneracy Threshold</td><td><span class="val">20%</span></td></tr><tr><td>Ploidy</td><td><span class="val">2</span></td></tr><tr><td>Filter Mode</td><td><span class="pill pill-blue">influenza</span></td></tr><tr><td>Variant Call Depth</td><td><span class="val">10000</span></td></tr><tr><td>Basecall Model / Tier</td><td><span class="pill pill-green">hac</span></td></tr><tr><td>Variant-calling Profile</td><td><span class="pill pill-blue">ont (indel calling off, -I)</span><p style="margin:6px 0 0;font-size:12px"><code>-B -Q 5 --max-BQ 30 -I</code></p></td></tr><tr><td>Base Quality (-Q / --max-BQ)</td><td><span class="val">-Q 5 / --max-BQ 30</span> <span class="pill pill-green">from basecall tier</span></td></tr><tr><td>Variant Call Mode</td><td><span class="val">c</span></td></tr><tr><td>Indel Insertions Rule</td><td><span class="val">equal_or_more</span></td></tr><tr><td>Indel Deletions Rule</td><td><span class="val">equal_or_more</span></td></tr><tr><td>Qualimap Enabled</td><td><span class="pill pill-green">Yes</span></td></tr><tr><td>NanoPlot Enabled</td><td><span class="pill pill-green">Yes</span></td></tr></tbody></table></div></div></div><div id="s1"><div class="card"><div class="card-header"><span class="icon"></span>Input Files</div><div class="card-body"><table><thead><tr><th>Item</th><th>Path / Value</th></tr></thead><tbody><tr><td>Barcode directory</td><td><span class="val">fastq_pass/barcode09/</span></td></tr><tr><td>Reference FASTA</td><td><span class="val">./reference/infA_references.fasta</span></td></tr><tr><td>Run start</td><td><span class="val">2026-08-31T14:38:54Z</span></td></tr><tr><td>Run end</td><td><span class="val">2026-08-31T14:42:11Z</span></td></tr><tr><td>Elapsed time</td><td><span class="val">00h:03m:17s</span></td></tr><tr><td>Report generated</td><td><span class="val">2026-09-02 18:01:53</span></td></tr></tbody></table></div></div></div><div id="s2"><div class="card"><div class="card-header"><span class="icon"></span>Raw Read Quality - NanoPlot</div><div class="card-body"><div class="stat-grid"><div class="stat-box"><span class="num">19473.0</span><span class="lbl">Total Reads</span></div><div class="stat-box"><span class="num">8738593.0</span><span class="lbl">Total Bases</span></div><div class="stat-box"><span class="num">455.0</span><span class="lbl">N50</span></div><div class="stat-box"><span class="num">448.8</span><span class="lbl">Mean Length</span></div><div class="stat-box"><span class="num">11.5</span><span class="lbl">Mean Quality</span></div><div class="stat-box"><span class="num">387.0</span><span class="lbl">Median Length</span></div><div class="stat-box"><span class="num">11.8</span><span class="lbl">Median Quality</span></div></div><p style="margin-top:14px"><a href="../step_1_raw_read_qc_nanoplot/barcode09/NanoPlot-report.html">Open full NanoPlot report</a></p></div></div></div><div id="s3"><div class="card"><div class="card-header"><span class="icon"></span>Mapping Quality - Qualimap</div><div class="card-body"><div class="stat-grid"><div class="stat-box"><span class="num">19,444</span><span class="lbl">Total Reads</span></div><div class="stat-box"><span class="num">63</span><span class="lbl">Mapped Reads</span></div><div class="stat-box"><span class="num">0.32%</span><span class="lbl">Mapping Rate</span></div><div class="stat-box"><span class="num">39,373 bp</span><span class="lbl">Bases Mapped</span></div><div class="stat-box"><span class="num">0.6556</span><span class="lbl">Mean coverage (Qualimap, whole panel)</span></div><div class="stat-box"><span class="num">2.1091</span><span class="lbl">Std Coverage</span></div></div><p style="color:#7fb3d3;font-size:13px;margin:16px 0 6px"><b>Coverage across genome</b> <span style="color:#4a6278">(26 zero-coverage contigs hidden)</span></p><table><thead><tr><th>Name</th><th>Length (bp)</th><th>Mapped bases</th><th>Mean coverage</th><th>Std</th></tr></thead><tbody><tr><td>H2_NC_007374.1</td><td>1,773</td><td>162</td><td><span class="val">0.09</span></td><td>0.29</td></tr><tr><td>H5_OP023667.1</td><td>1,751</td><td>3,310</td><td><span class="val">1.89</span></td><td>2.35</td></tr><tr><td>N1_NC_007361.1</td><td>1,458</td><td>5,435</td><td><span class="val">3.73</span></td><td>2.25</td></tr><tr><td>N1_OR467201.1</td><td>1,371</td><td>544</td><td><span class="val">0.40</span></td><td>0.48</td></tr><tr><td>N2_ON497150.1</td><td>1,439</td><td>1,919</td><td><span class="val">1.33</span></td><td>2.43</td></tr><tr><td>PB2_OP023708.1</td><td>2,292</td><td>2,168</td><td><span class="val">0.95</span></td><td>1.58</td></tr><tr><td>PB1_OP028538.1</td><td>2,289</td><td>223</td><td><span class="val">0.10</span></td><td>0.30</td></tr><tr><td>PA_OP023666.1</td><td>2,176</td><td>2,242</td><td><span class="val">1.03</span></td><td>1.45</td></tr><tr><td>NP_OM938209.1</td><td>1,540</td><td>4,506</td><td><span class="val">2.93</span></td><td>1.19</td></tr><tr><td>MP_OP023633.1</td><td>1,002</td><td>6,861</td><td><span class="val">6.85</span></td><td>1.28</td></tr><tr><td>NS_OP023561.1</td><td>865</td><td>12,003</td><td><span class="val">13.88</span></td><td>0.69</td></tr></tbody></table><p style="color:#7fb3d3;font-size:13px;margin:16px 0 6px"><b>Coverage across reference</b></p><img src="../step_5_alignment_qc_qualimap/barcode09/qualimap_output_barcode09/images_qualimapReport/genome_coverage_across_reference.png" alt="Coverage across reference" style="max-width:100%;border:1px solid #2d4560;border-radius:6px;background:#fff"><p style="margin-top:14px"><a href="../step_5_alignment_qc_qualimap/barcode09/qualimap_output_barcode09/barcode09_qualimap_report.pdf">Open full Qualimap report (PDF)</a></p></div></div></div><div id="s4"><div class="card"><div class="card-header"><span class="icon"></span>Influenza Segment Selection - idxstats</div><div class="card-body"><table><thead><tr><th>Reference</th><th>Length (bp)</th><th>Mapped reads (primary)</th><th>% of mapped</th></tr></thead><tbody><tr><td>NS_OP023561.1</td><td>865</td><td><span class="val">14</span></td><td>22.2%</td></tr><tr><td>MP_OP023633.1</td><td>1,002</td><td><span class="val">10</span></td><td>15.9%</td></tr><tr><td>N1_NC_007361.1 <span class="pill pill-green">Dominant NA</span></td><td>1,458</td><td><span class="val">7</span></td><td>11.1%</td></tr><tr><td>PA_OP023666.1</td><td>2,176</td><td><span class="val">7</span></td><td>11.1%</td></tr><tr><td>N2_ON497150.1</td><td>1,439</td><td><span class="val">6</span></td><td>9.5%</td></tr><tr><td>NP_OM938209.1</td><td>1,540</td><td><span class="val">6</span></td><td>9.5%</td></tr><tr><td>H5_OP023667.1 <span class="pill pill-green">Dominant HA</span></td><td>1,751</td><td><span class="val">5</span></td><td>7.9%</td></tr><tr><td>PB2_OP023708.1</td><td>2,292</td><td><span class="val">5</span></td><td>7.9%</td></tr><tr><td>H2_NC_007374.1</td><td>1,773</td><td><span class="val">1</span></td><td>1.6%</td></tr><tr><td>N1_OR467201.1</td><td>1,371</td><td><span class="val">1</span></td><td>1.6%</td></tr><tr><td>PB1_OP028538.1</td><td>2,289</td><td><span class="val">1</span></td><td>1.6%</td></tr><tr><td>H1_MH393827.1</td><td>1,777</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H3_NC_007366.1</td><td>1,762</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H4_MN209301.1</td><td>1,713</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H6_MN253646.1</td><td>1,744</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H7_NC_026425.1</td><td>1,708</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H8_MT090424.1</td><td>1,718</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H9_NC_004908.1</td><td>1,714</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H10_MH071504.1</td><td>1,703</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H11_MT090343.1</td><td>1,735</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H12_MK978984.1</td><td>1,727</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H13_MN783529.1</td><td>1,717</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H14_MN431050.1</td><td>1,707</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H15_MF145787.1</td><td>1,762</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H16_MW872254.1</td><td>1,758</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H17_CY103892.1</td><td>1,784</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>H18_KR077932.1</td><td>1,769</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N1_PV668490.1</td><td>1,438</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N3_MW404536.1</td><td>1,452</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N4_MT090426.1</td><td>1,437</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N5_MK978994.1</td><td>1,452</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N6_MH071489.1</td><td>1,452</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N7_MK345670.1</td><td>1,433</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N8_MG042104.1</td><td>1,435</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N9_NC_026429.1</td><td>1,398</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N10_CY103894.1</td><td>1,390</td><td><span class="val">0</span></td><td>0.0%</td></tr><tr><td>N11_KR077934.1</td><td>1,416</td><td><span class="val">0</span></td><td>0.0%</td></tr></tbody></table><p style="margin-top:10px"><b>Reads that did not map to any reference:</b> 19,381 (99.7% of all reads). A high value means the reference panel may be the wrong organism or the sample is dominated by off-target material.</p><p style="margin-top:14px;color:#7fb3d3;font-size:12px"><b>Selection rule:</b> dominant HA = H* segment with highest mapped read count; dominant NA = N[0-9]*/NA* segment with highest mapped read count (from <code>samtools idxstats</code>).</p></div></div></div><div id="s5"><div class="card"><div class="card-header"><span class="icon"></span>Coverage Statistics</div><div class="card-body"><div class="stat-grid"><div class="stat-box"><span class="num">2.1</span><span class="lbl">Mean depth (samtools, covered refs)</span></div><div class="stat-box"><span class="num">0</span><span class="lbl">Min depth</span></div><div class="stat-box"><span class="num">14</span><span class="lbl">Max depth</span></div><div class="stat-box"><span class="num">17,956</span><span class="lbl">Positions in depth file</span></div><div class="stat-box"><span class="num">11</span><span class="lbl">References covered</span></div><div class="stat-box"><span class="num">9251</span><span class="lbl">Zero-coverage positions</span></div><div class="stat-box"><span class="num">48.5%</span><span class="lbl">Breadth ≥ 1×</span></div></div><h4 style='margin:14px 0 6px'>Per reference</h4><table><thead><tr><th>Reference</th><th>Positions</th><th>Zero-coverage</th><th>Breadth ≥ 1×</th><th>Mean depth</th></tr></thead><tbody><tr><td>H2_NC_007374.1</td><td>1,773</td><td>1,612</td><td>9.1%</td><td>0.1</td></tr><tr><td>H5_OP023667.1</td><td>1,751</td><td>1,068</td><td>39.0%</td><td>1.9</td></tr><tr><td>MP_OP023633.1</td><td>1,002</td><td>0</td><td>100.0%</td><td>6.7</td></tr><tr><td>N1_NC_007361.1</td><td>1,458</td><td>8</td><td>99.5%</td><td>3.6</td></tr><tr><td>N1_OR467201.1</td><td>1,371</td><td>857</td><td>37.5%</td><td>0.4</td></tr><tr><td>N2_ON497150.1</td><td>1,439</td><td>1,114</td><td>22.6%</td><td>1.3</td></tr><tr><td>NP_OM938209.1</td><td>1,540</td><td>5</td><td>99.7%</td><td>2.9</td></tr><tr><td>NS_OP023561.1</td><td>865</td><td>0</td><td>100.0%</td><td>13.7</td></tr><tr><td>PA_OP023666.1</td><td>2,176</td><td>963</td><td>55.7%</td><td>1.0</td></tr><tr><td>PB1_OP028538.1</td><td>2,289</td><td>2,066</td><td>9.7%</td><td>0.1</td></tr><tr><td>PB2_OP023708.1</td><td>2,292</td><td>1,558</td><td>32.0%</td><td>0.9</td></tr></tbody></table></div></div></div><div id="s6"><div class="card"><div class="card-header"><span class="icon"></span>Degeneracy Resolution Summary</div><div class="card-body"><div class="stat-grid"><div class="stat-box"><span class="num">3766</span><span class="lbl">Ambiguous Bases Found</span></div><div class="stat-box"><span class="num">0</span><span class="lbl">Resolved to Base</span></div><div class="stat-box"><span class="num">0</span><span class="lbl">Resolved to Insertion</span></div><div class="stat-box"><span class="num">0</span><span class="lbl">Resolved to Deletion</span></div><div class="stat-box"><span class="num">3766</span><span class="lbl">Retained (ambiguous)</span></div><div class="stat-box"><span class="num">0.0%</span><span class="lbl">Resolution Rate</span></div></div><br><table><thead><tr><th>Segment</th><th>Total Ambiguous</th><th>Resolved</th><th>Retained</th><th>Rate</th></tr></thead><tbody><tr><td>H5_OP023667.1</td><td>1068</td><td>0</td><td>1068</td><td><span class="val">0.0%</span></td></tr><tr><td>N1_NC_007361.1</td><td>1</td><td>0</td><td>1</td><td><span class="val">0.0%</span></td></tr><tr><td>PB2_OP023708.1</td><td>1562</td><td>0</td><td>1562</td><td><span class="val">0.0%</span></td></tr><tr><td>PB1_OP028538.1</td><td>0</td><td>0</td><td>0</td><td><span class="val">0.0%</span></td></tr><tr><td>MP_OP023633.1</td><td>83</td><td>0</td><td>83</td><td><span class="val">0.0%</span></td></tr><tr><td>NP_OM938209.1</td><td>7</td><td>0</td><td>7</td><td><span class="val">0.0%</span></td></tr><tr><td>NS_OP023561.1</td><td>91</td><td>0</td><td>91</td><td><span class="val">0.0%</span></td></tr></tbody></table></div></div></div><div id="s7"><div class="card"><div class="card-header"><span class="icon"></span>Indel Decisions</div><div class="card-body"><p style='color:#4a6278'>No indel decisions recorded.</p></div></div></div><div id="s8"><div class="card"><div class="card-header"><span class="icon"></span>Consensus Sequence Summary</div><div class="card-body"><table><thead><tr><th>Segment</th><th>Length (bp)</th><th>GC% (of ACGT)</th><th>N (no call)</th><th>IUPAC degenerate</th><th>Total ambiguous</th><th>Low confidence (lowercase)</th></tr></thead><tbody><tr><td>barcode09_H5_OP023667.1</td><td>1,751</td><td>40.0%</td><td>1,068</td><td>0</td><td>1,068</td><td>1,073 (61.3%)</td></tr><tr><td>barcode09_N1_NC_007361.1</td><td>1,457</td><td>43.8%</td><td>0</td><td>1</td><td>1</td><td>897 (61.6%)</td></tr><tr><td>barcode09_PB2_OP023708.1</td><td>2,292</td><td>45.5%</td><td>1,558</td><td>4</td><td>1,562</td><td>1,900 (82.9%)</td></tr><tr><td>barcode09_PB1_OP028538.1</td><td>223</td><td>44.4%</td><td>0</td><td>0</td><td>0</td><td>223 (100.0%)</td></tr><tr><td>barcode09_PA_OP023666.1</td><td>2,176</td><td>44.1%</td><td>954</td><td>0</td><td>954</td><td>1,890 (86.9%)</td></tr><tr><td>barcode09_MP_OP023633.1</td><td>1,002</td><td>48.2%</td><td>9</td><td>74</td><td>83</td><td>0 (0.0%)</td></tr><tr><td>barcode09_NP_OM938209.1</td><td>1,540</td><td>47.2%</td><td>5</td><td>2</td><td>7</td><td>811 (52.7%)</td></tr><tr><td>barcode09_NS_OP023561.1</td><td>865</td><td>43.4%</td><td>3</td><td>88</td><td>91</td><td>0 (0.0%)</td></tr></tbody></table><p style="margin-top:10px;color:#c8862a"><b>6,794 of 11,306 bases (60.1%) are low-confidence</b> - lowercase in the FASTA, meaning read depth below 3 or call quality below 10 at that position. This is the variant caller's own marking, preserved rather than discarded. Uppercase with <code>seqtk seq -U</code> if a downstream tool or archive requires it, and report this fraction alongside.</p></div></div></div><div id="s9"><div class="card"><div class="card-header"><span class="icon"></span>Output Files</div><div class="card-body"><ul class="link-list"><li><a href="../step_8_refined_consensus/barcode09_consensus_edited.fasta">Final Consensus (FASTA)</a> <span style="color:#4a6278;font-size:11px">(11.4 KB)</span></li><li><a href="../step_7_draft_consensus/barcode09_consensus.fasta">Initial Consensus (FASTA)</a> <span style="color:#4a6278;font-size:11px">(14.2 KB)</span></li><li><a href="../../log/barcode09_consensus_edited_diagnostic_log.txt">Diagnostic Log (TSV)</a> <span style="color:#4a6278;font-size:11px">(527.2 KB)</span></li><li><a href="../step_4_mapped/barcode09/barcode09.bam">BAM File</a> <span style="color:#4a6278;font-size:11px">(7.2 MB)</span></li><li><a href="../step_4_mapped/barcode09/barcode09.coverage">Coverage Depth</a> <span style="color:#4a6278;font-size:11px">(365.0 KB)</span></li><li><a href="../step_2_unzipped_merged/barcode09_merged.fastq">Merged Reads</a> <span style="color:#4a6278;font-size:11px">(24.0 MB)</span></li><li><a href="../step_3_adapter_trimmed/barcode09_trimmed.fastq">Trimmed Reads</a> <span style="color:#4a6278;font-size:11px">(20.3 MB)</span></li><li><a href="../step_4_mapped/barcode09/barcode09.sam">Mapped SAM</a> <span style="color:#4a6278;font-size:11px">(14.2 MB)</span></li></ul></div></div></div><div id="s10"><div class="card"><div class="card-header"><span class="icon"></span>Environment &amp; Versions</div><div class="card-body"><p>DeGenRESOLVE v<span class="val">1.0.0</span></p><p>Tool versions vs offline bundle: <span class="pill pill-amber">DIFFERS</span> <span class="val">java: Picked up JAVA_TOOL_OPTIONS:  -Djava.awt.headless=true vs bundled openjdk version 25.0.2-internal 2026-01-20</span></p><details><summary>Show all tool versions (15 tools)</summary><table><thead><tr><th>Tool / Library</th><th>Version</th></tr></thead><tbody><tr><td>NanoPlot</td><td><span class="val">NanoPlot 1.47.2</span></td></tr><tr><td>porechop</td><td><span class="val">0.2.4</span></td></tr><tr><td>minimap2</td><td><span class="val">2.31-r1302</span></td></tr><tr><td>samtools</td><td><span class="val">samtools 1.24</span></td></tr><tr><td>qualimap</td><td><span class="val">v.2.2.2-dev</span></td></tr><tr><td>bcftools</td><td><span class="val">bcftools 1.24</span></td></tr><tr><td>vcfutils.pl</td><td><span class="val">bundled with bcftools 1.24</span></td></tr><tr><td>seqtk</td><td><span class="val">Version: 1.5-r133</span></td></tr><tr><td>python</td><td><span class="val">Python 3.10.21</span></td></tr><tr><td>pysam</td><td><span class="val">0.24.0</span></td></tr><tr><td>biopython</td><td><span class="val">1.88</span></td></tr><tr><td>numpy</td><td><span class="val">2.2.6</span></td></tr><tr><td>java</td><td><span class="val">Picked up JAVA_TOOL_OPTIONS:  -Djava.awt.headless=true</span></td></tr><tr><td>PyQt5</td><td><span class="val">5.15.11</span></td></tr><tr><td>os</td><td><span class="val">Linux 6.14.0-37-generic x86_64</span></td></tr></tbody></table></details></div></div></div>
+<footer>Generated by DeGenRESOLVE v1.0.0 &nbsp;-&nbsp; 2026-09-02 18:01:53</footer>
+</div>
+<script>
+document.querySelectorAll('.toc a').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){
+      var nav=document.querySelector('.sticky-nav');
+      var y=t.getBoundingClientRect().top+window.pageYOffset-(nav?nav.offsetHeight+10:200);
+      window.scrollTo(0,y);
+    }
+  });
+});
+</script>
+</body>
+</html>
