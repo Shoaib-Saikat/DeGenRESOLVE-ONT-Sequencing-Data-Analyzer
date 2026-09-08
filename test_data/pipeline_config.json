@@ -1,0 +1,46 @@
+{
+  "min_coverage": 100,
+  "degeneracy_threshold": 20,
+  "ploidy": 2,
+  "indel_rules": {
+    "insertions": "equal_or_more",
+    "deletions": "equal_or_more",
+    "custom_percentage": 50.0
+  },
+  "variant_call_settings": {
+    "depth_per_site": 10000,
+    "call_mode": "c"
+  },
+  "force_sup_profile": false,
+  "filter_mode": "influenza",
+  "influenza_segments": [
+    "HA*",
+    "NA*",
+    "PB2",
+    "PB1",
+    "PA",
+    "NP",
+    "MP",
+    "NS"
+  ],
+  "qualimap": {
+    "enabled": true
+  },
+  "nanoplot": {
+    "enabled": true
+  },
+  "parallel": {
+    "enabled": true,
+    "threads": 8
+  },
+  "advanced_criteria": {
+    "strand_balance_threshold": 0.1,
+    "homopolymer_min_length": 5,
+    "homopolymer_window": 5,
+    "read_end_threshold": 0.8,
+    "read_end_edge_fraction": 0.1,
+    "strict_strand_bias": false,
+    "strict_homopolymer": false,
+    "strict_read_end": false
+  }
+}

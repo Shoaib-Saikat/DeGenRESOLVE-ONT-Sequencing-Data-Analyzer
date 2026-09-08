@@ -1,0 +1,38 @@
+{
+  "min_coverage": 100,
+  "degeneracy_threshold": 20,
+  "ploidy": 2,
+  "filter_mode": "general",
+  "indel_rules": {
+    "insertions": "equal_or_more",
+    "deletions": "equal_or_more",
+    "custom_percentage": 50.0
+  },
+  "variant_call_settings": {
+    "depth_per_site": 10000,
+    "call_mode": "c"
+  },
+  "_comment_base_quality": "min_base_quality and max_base_quality are omitted on purpose: absent means take the basecall-tier default (-Q1/--max-BQ 35 for sup, -Q5/--max-BQ 30 for hac), matching bcftools' ont and ont-sup profiles. Add both to pin them; they are a validated pair and should move together.",
+  "_comment_force_sup_profile": "true applies the full ont-sup flag set regardless of the detected tier. This is not an indel-only switch: it also moves -Q and --max-BQ, so SNV calls and degeneracy codes shift with it.",
+  "force_sup_profile": false,
+  "qualimap": {
+    "enabled": true
+  },
+  "nanoplot": {
+    "enabled": true
+  },
+  "advanced_criteria": {
+    "strand_balance_threshold": 0.1,
+    "homopolymer_min_length": 5,
+    "homopolymer_window": 5,
+    "read_end_threshold": 0.8,
+    "read_end_edge_fraction": 0.1,
+    "strict_strand_bias": false,
+    "strict_homopolymer": false,
+    "strict_read_end": false
+  },
+  "parallel": {
+    "enabled": true,
+    "threads": 4
+  }
+}

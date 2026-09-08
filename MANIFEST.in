@@ -1,0 +1,18 @@
+# setup.py reads requirements.txt at build time via read_requirements(). Without it in the
+# sdist, `pip install` of the source distribution fails with FileNotFoundError before it can
+# install anything. README.md is read the same way by read_readme().
+include requirements.txt
+include README.md
+include LICENSE
+include example_pipeline_config.json
+include bundled_tool_versions.json
+
+# Documentation a reviewer needs alongside the code.
+include readme_bench_scientist.md
+include DeGenRESOLVE_interface.md
+include REFERENCES.md
+
+# The pipeline itself: these shell scripts are executed by the worker, not imported.
+recursive-include src/degenresolve/scripts *.sh *.py
+recursive-include src/degenresolve/app_data *
+recursive-include tests *.py

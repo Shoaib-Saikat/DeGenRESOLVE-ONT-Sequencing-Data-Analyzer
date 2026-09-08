@@ -1,0 +1,120 @@
+{
+  "generated": "2026-08-31 20:42:11",
+  "consensus_file": "./barcode09_consensus.fasta",
+  "bam_file": "temp_barcode09/barcode09.bam",
+  "reference_file": "./reference/infA_references.fasta",
+  "parameters": {
+    "min_coverage": 100,
+    "min_percentage_diff": 20,
+    "strand_balance_threshold": 0.1,
+    "homopolymer_min_length": 5,
+    "homopolymer_window": 5,
+    "read_end_threshold": 0.8,
+    "read_end_edge_fraction": 0.1,
+    "strict": {
+      "strand_bias": false,
+      "homopolymer": false,
+      "read_end": false
+    }
+  },
+  "total_sites_examined": 3766,
+  "resolved_to_dominant_base": 0,
+  "retained_as_iupac": 0,
+  "converted_to_indel": 0,
+  "indels_proposed_by_bcftools": 0,
+  "indels_rejected_by_guard": 0,
+  "indel_evidence_not_acted_upon": 0,
+  "retained_low_coverage": 3766,
+  "retained_strict_mode_revert": 0,
+  "retained_allele_set_conflict": 0,
+  "sites_unaccounted_for": 0,
+  "flagged_strand_bias": 0,
+  "flagged_homopolymer": 142,
+  "flagged_read_end_enrichment": 0,
+  "coverage_summary": {
+    "min": 5,
+    "max": 14,
+    "median": 13,
+    "mean": 10.2
+  },
+  "usable_coverage_summary": {
+    "min": 4,
+    "max": 14,
+    "median": 10,
+    "mean": 9.9
+  },
+  "per_segment": {
+    "H5_OP023667.1": {
+      "total_degeneracies": 1068,
+      "resolved": 0,
+      "kept": 1068,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 106,
+      "read_end_warnings": 0
+    },
+    "N1_NC_007361.1": {
+      "total_degeneracies": 1,
+      "resolved": 0,
+      "kept": 1,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 0,
+      "read_end_warnings": 0
+    },
+    "PB2_OP023708.1": {
+      "total_degeneracies": 1562,
+      "resolved": 0,
+      "kept": 1562,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 15,
+      "read_end_warnings": 0
+    },
+    "PB1_OP028538.1": {
+      "total_degeneracies": 0,
+      "resolved": 0,
+      "kept": 0,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 0,
+      "read_end_warnings": 0
+    },
+    "PA_OP023666.1": {
+      "total_degeneracies": 954,
+      "resolved": 0,
+      "kept": 954,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 15,
+      "read_end_warnings": 0
+    },
+    "MP_OP023633.1": {
+      "total_degeneracies": 83,
+      "resolved": 0,
+      "kept": 83,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 4,
+      "read_end_warnings": 0
+    },
+    "NP_OM938209.1": {
+      "total_degeneracies": 7,
+      "resolved": 0,
+      "kept": 7,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 0,
+      "read_end_warnings": 0
+    },
+    "NS_OP023561.1": {
+      "total_degeneracies": 91,
+      "resolved": 0,
+      "kept": 91,
+      "resolved_to_deletion": 0,
+      "strand_bias_warnings": 0,
+      "homopolymer_warnings": 2,
+      "read_end_warnings": 0
+    }
+  }
+}

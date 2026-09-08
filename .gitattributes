@@ -1,0 +1,16 @@
+# Normalize all text files to LF in the repository and on checkout.
+* text=auto eol=lf
+
+# Shell scripts must always be LF; CRLF breaks bash on Linux.
+*.sh text eol=lf
+
+# Known binary assets: never normalize or diff as text.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.gz   binary
+*.bam  binary
+*.bai  binary
+*.csi  binary

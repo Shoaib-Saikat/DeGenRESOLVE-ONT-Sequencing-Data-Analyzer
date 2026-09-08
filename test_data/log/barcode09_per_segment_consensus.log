@@ -1,0 +1,20 @@
+Starting basic consensus generation at Mon Aug 31 08:42:04 PM +06 2026
+Configuration parameters:
+  - VARIANT_CALL_MODE: c
+  - PLOIDY: 2
+  - FILTER_MODE: influenza (info only; not applied here)
+  - VARIANT_CALL_DEPTH: 10000
+  - Note: Coverage filtering and degeneracy resolution moved to improved_consensus_editor.py
+
+Building whole-genome consensus (single pass) for barcode09...
+  Step 1: Calling variants (bcftools call -c)...
+  - Basecall tier: hac
+  - mpileup flags: -B -Q 5 --max-BQ 30 -I
+  - VCF: ./barcode09_variants.vcf.gz
+  Step 2: Building draft consensus (vcfutils.pl vcf2fq)...
+  Converting whole-genome FASTQ -> FASTA...
+  - FASTQ: ./barcode09_consensus.fastq
+Processing complete.
+  - FASTA: ./barcode09_consensus.fasta
+Note: Coverage filtering and degeneracy resolution will be applied by improved_consensus_editor.py
+Log saved to ./barcode09_per_segment_consensus.log

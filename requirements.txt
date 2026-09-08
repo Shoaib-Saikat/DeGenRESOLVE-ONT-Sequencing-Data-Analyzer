@@ -1,0 +1,38 @@
+# DeGenRESOLVE - Python dependencies
+#
+# Pinned to the versions in the validated offline environment (env.lock / requirements.lock,
+# built 2026-08-24). Lower bounds alone do not reproduce a run: numpy 2.x, pysam and biopython
+# have all made breaking changes, so a fresh `pip install` with `>=` can resolve a different
+# stack than the one the published results were produced with.
+#
+# The offline installer (install.sh) does not read this file - it unpacks the packed conda
+# environment. This file is for the source install (install_source.sh) and for `pip install -e`.
+
+# --- Core GUI framework (not needed for the headless consensus-editor CLI) ---
+PyQt5==5.15.11
+PyQtWebEngine==5.15.7
+markdown-it-py==4.2.0
+
+# --- Bioinformatics libraries (required by the pipeline and the CLI) ---
+pysam==0.24.0
+biopython==1.88
+
+# --- Present in the validated environment; not imported by DeGenRESOLVE itself ---
+# An audit confirmed nothing under src/ or app/ imports these four. They are kept because
+# requirements.lock pins them, install.sh's verification step imports them, and removing
+# them would make this manifest disagree with the environment the published results came
+# from. Do not treat their presence as evidence that the pipeline uses them: VCF handling is
+# done by bcftools and consensus_editor._read_vcf_indels(), not cyvcf2.
+numpy==2.2.6
+cyvcf2==0.34.0
+click==8.4.2
+coloredlogs==15.0.1
+humanfriendly==10.0
+
+# External tools are NOT pip-installable. The offline bundle ships them; for a source
+# install they must be on PATH:
+#   samtools 1.24, bcftools 1.24 (+ vcfutils.pl), minimap2 2.31-r1302, seqtk 1.5-r133,
+#   porechop 0.2.4, NanoPlot 1.47.2, qualimap 2.2.2 (needs java)
+# bcftools must be >= 1.21: the sup profile passes --indels-cns and --max-BQ.
+#
+# pytest is NOT included in the bundled environment. `pip install pytest` to run app/tests/.

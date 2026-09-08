@@ -1,0 +1,35 @@
+# Large build artifacts
+*.tar.gz
+*.tar.bz2
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Runtime files generated during pipeline execution
+ont_analysis_log_*.txt
+pipeline_status.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pipeline intermediates - large and fully regenerable from the inputs.
+# test_data/results ships the expected outputs of a validated run; these two
+# steps are the raw and trimmed FASTQ, and the SAM is redundant with the BAM
+# (samtools view -h regenerates it).
+test_data/results/step_2_unzipped_merged/
+test_data/results/step_3_adapter_trimmed/
+*.sam
