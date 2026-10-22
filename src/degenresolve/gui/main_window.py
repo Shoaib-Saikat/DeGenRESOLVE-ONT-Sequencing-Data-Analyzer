@@ -537,7 +537,7 @@ class ONTSequencingAnalyzer(QMainWindow):
         app_label = QLabel(
             "<div style='color:#e0e8f0;font-family:sans-serif;'>"
             "<p style='font-size:18px;font-weight:bold;color:#7dd3fc;margin:0 0 8px 0;'>"
-            "DeGenRESOLVE v1.0.0</p>"
+            "DeGenRESOLVE v1.0.1</p>"
             "<p style='font-size:12px;margin:0 0 8px 0;'>A comprehensive Linux-based standalone "
             "application for processing ONT raw FASTQ files and generating refined consensus "
             "FASTA sequences.</p>"

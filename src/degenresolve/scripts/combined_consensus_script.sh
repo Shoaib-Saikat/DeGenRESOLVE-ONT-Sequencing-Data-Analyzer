@@ -72,20 +72,27 @@ echo "  Step 1: Calling variants (bcftools call -${_CALL_FLAG})..." | tee -a "$L
 #               Deletion counts still reach the diagnostic log via the evidence
 #               sweep, but nothing edits the consensus.
 # sup (-X ont-sup):
-#   --indels-cns  edlib consensus indel model, the only engine here that can tell a
-#               real indel from an alignment artifact. On the reference dataset it
-#               correctly rejected a 45% and an 80% deletion that a raw pileup count
-#               accepted, because it realigns rather than counting columns.
+#   --indels-cns  edlib consensus indel model: it realigns reads against a consensus of
+#               each candidate rather than counting pileup columns. (An earlier note
+#               here said it had rejected a 45% and an 80% deletion on the reference
+#               dataset. It had not examined them: both lie above 250 reads, see
+#               --max-idepth below. With the limit lifted it proposes both.)
 #   -h110 --poly-mqual -F0.2 --indel-bias 0.7 --del-bias 0.4
 #               tandem-repeat and homopolymer suppression; without these the same
 #               model emits 36 calls on this data instead of 6, mostly homopolymers.
+#   --max-idepth  bcftools calls indels only where depth is below this (default 250).
+#               Left at 250, no indel was ever proposed above 250 reads (v1.0.0). Setting
+#               it to the pileup depth (-d) is not enough: where the reads saturate the
+#               pileup the depth equals or slightly exceeds -d and the indel is skipped
+#               again, and that is where an amplicon sample is deepest. -d already
+#               bounds the work, so the limit is put where the pileup cannot reach it.
 #
 # Either way the draft stays reference-length: vcf2fq ignores indel records, and the
 # -m path strips them before bcftools consensus. consensus_editor.py maps
 # consensus->genome 1:1 (genomic_pos = consensus_pos) during degeneracy resolution
 # and applies indels only afterwards, from this VCF.
 case "${BASECALL_TIER:-unknown}" in
-  sup) MPILEUP_FLAGS="--indels-cns -B -Q ${MIN_BASE_QUALITY:-1} --max-BQ ${MAX_BASE_QUALITY:-35} -F0.2 -o15 -e1 -h110 --delta-BQ 99 --del-bias 0.4 --indel-bias 0.7 --poly-mqual --seqq-offset 130 --indel-size 80" ;;
+  sup) MPILEUP_FLAGS="--indels-cns -B -Q ${MIN_BASE_QUALITY:-1} --max-BQ ${MAX_BASE_QUALITY:-35} -F0.2 -o15 -e1 -h110 --delta-BQ 99 --del-bias 0.4 --indel-bias 0.7 --poly-mqual --seqq-offset 130 --indel-size 80 --max-idepth 1000000000" ;;
   *)   MPILEUP_FLAGS="-B -Q ${MIN_BASE_QUALITY:-5} --max-BQ ${MAX_BASE_QUALITY:-30} -I" ;;
 esac
 echo "  - Basecall tier: ${BASECALL_TIER:-unknown}" | tee -a "$LOG_FILE"

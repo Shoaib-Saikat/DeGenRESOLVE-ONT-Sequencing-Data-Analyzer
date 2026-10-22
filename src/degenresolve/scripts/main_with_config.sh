@@ -186,7 +186,7 @@ _qmver() { JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -Djava.awt.headless=true" q
 _jver()  { java -version 2>&1 | head -1 | tr -d '"' || echo "not found"; }
 _pymod() { python3 -c "import $1; print(getattr($1,'__version__','unknown'))" 2>/dev/null || echo "not found"; }
 
-APP_VERSION="1.0.0"
+APP_VERSION="1.0.1"
 # scripts/ -> degenresolve/ -> src/ -> app root. The previous form resolved to
 # src/, one level short, so BUNDLED_VER_FILE never found the manifest the
 # installer places at the app root and the version check always reported

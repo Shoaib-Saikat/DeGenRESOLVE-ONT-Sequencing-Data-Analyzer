@@ -1,5 +1,5 @@
 DeGenRESOLVE run receipt - barcode01
-params md5    : 29a055a5e70421fd12ed1cb4d921cf1c
+params md5    : 257baef5a25455df54283773aaf5daa8
 reference md5 : 00cb9e0c1a7fffb69be5c31801fd8191
 config md5    : 0b337c4ff3fe330a5ac2640aa19b303d
 basecall model: dna_r10.4.1_e8.2_400bps_hac@v4.3.0 (37245/37245 reads)
@@ -9,9 +9,9 @@ mpileup       : force_sup_profile=false
 mpileup       : mpileup_flags=-B -Q 5 --max-BQ 30 -I
 mpileup       : bcftools_version=1.24
 resolver -Q   : 5 (floored at 5; counts reads, cannot down-weight)
-environment   : c13a6b841038b386cd3648787a572d3f
+environment   : 938456daa3c5169c1b57c3eddafe9670
                 (full package inventory: results/reports/environment_manifest.txt)
-version check : DIFFERS
+version check : MATCHES BUNDLE
   samtools: samtools 1.24
   bcftools: bcftools 1.24
   minimap2: 2.31-r1302
@@ -19,7 +19,7 @@ version check : DIFFERS
   python: Python 3.10.21
   pysam: 0.24.0
 --- effective parameters ---
-  app_version=1.0.0
+  app_version=1.0.1
   degeneracy_threshold=20
   filter_mode=influenza
   force_sup_profile=false
@@ -49,5 +49,5 @@ sam (records)     48bdd6f0263c4cdad87b677826f5c782
 bam (records)     4835f7ae45bd30ea15564d284d30c5f3
 vcf (records)     0a29ada065f82353916558edeb70f150
 draft consensus   b17e641d487934aa0b03b619efcefeaa
-edited consensus  0a730ebc3022916a6d24d3396bb3112a
-diagnostic log    655384d4330e34175a5bfe941f3e590c
+edited consensus  95b920adde6c27267137feb2bd4f1f75
+diagnostic log    0d11353226f5138dd80463017771eadd

@@ -148,3 +148,40 @@ def test_n_bases_do_not_count_toward_usable_coverage():
         counts, 140, "R", 100, 100)
     assert analysis["usable_coverage"] == 90
     assert analysis["decision"] == "KEEP"
+
+
+# Deletion-dominated columns
+#
+# Scored against Illumina-derived genomes (BioProject PRJNA1173216), four positions were
+# resolved from the few reads that still carried a base at a column where 90-96% of reads
+# carried a deletion. All four calls were wrong. Such a column is an alignment gap; the
+# bases left in it are not evidence for a call.
+# ---------------------------------------------------------------------------
+
+def test_column_dominated_by_deletions_is_not_resolved():
+    """The PB2 1422 shape: 247 usable bases with a clear majority, 4,329 deletions."""
+    counts = Counter({"G": 149, "A": 93, "C": 5, "DEL": 4329})
+    analysis = _decider()._analyze_degeneracy_decision_enhanced(
+        counts, 4576, "R", 1422, 1422)
+    assert analysis["decision"] == "KEEP"
+    reason = analysis["reason"].lower()
+    assert "deletion" in reason
+    # The QC summary sorts kept sites by words in the reason. This one is an ambiguity
+    # code left in place, so it must count there and must not read as low coverage.
+    assert "ambiguous" in reason and "low" not in reason
+
+
+def test_deletion_gate_starts_at_thirty_percent():
+    """300 deletions over 700 usable bases is exactly 30%, the indel-evidence threshold."""
+    counts = Counter({"A": 600, "G": 100, "DEL": 300})
+    analysis = _decider()._analyze_degeneracy_decision_enhanced(
+        counts, 1000, "R", 1, 1)
+    assert analysis["decision"] == "KEEP"
+
+
+def test_column_with_few_deletions_still_resolves():
+    counts = Counter({"A": 600, "G": 100, "DEL": 299})
+    analysis = _decider()._analyze_degeneracy_decision_enhanced(
+        counts, 999, "R", 1, 1)
+    assert analysis["decision"] == "RESOLVE"
+    assert analysis["resolved_base"] == "A"

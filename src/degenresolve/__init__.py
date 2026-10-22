@@ -8,7 +8,7 @@ Author: Shoaib Saikat
 Version: 1.0
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "Shoaib Saikat"
 __email__ = "saikatshoaib@gmail.com"
 

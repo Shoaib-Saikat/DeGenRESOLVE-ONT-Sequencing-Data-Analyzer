@@ -117,7 +117,7 @@ no internet and no pre-installed bioinformatics tools.
 ```bash
 # Option B - offline install (recommended). Bundles Miniconda and a packed conda
 # environment with every external tool; the target machine needs only tar and gzip.
-tar -xzf degenresolve_offline_bundle_1.0.0.tar.gz
+tar -xzf degenresolve_offline_bundle_1.0.1.tar.gz
 bash degenresolve_bundle/install.sh
 
 # Options: --prefix DIR, --conda-dir DIR, --env-name NAME, --no-shortcut,
@@ -220,8 +220,8 @@ the pileup.
 
 Earlier pre-release builds destroyed this mask by uppercasing the whole sequence, so every
 position looked equally well supported. It is preserved now because the difference is large
-and material: in the shipped demo data, `barcode01` is 0.3% soft-masked while `barcode09`
-is **60.2%** soft-masked. Both would previously have been published as fully confident.
+and material: in the shipped demo data, `barcode01` is 0.0% soft-masked while `barcode09`
+is **60.1%** soft-masked. Both would previously have been published as fully confident.
 
 Two consequences worth planning for:
 
@@ -692,7 +692,7 @@ processor.process_consensus()
 
 ## Version
 
-v1.0.0
+v1.0.1
 
 ## Author
 

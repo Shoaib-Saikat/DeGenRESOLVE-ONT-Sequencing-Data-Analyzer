@@ -68,7 +68,7 @@ Examples:
     parser.add_argument(
         "--version", 
         action="version", 
-        version="DeGenRESOLVE 1.0.0"
+        version="DeGenRESOLVE 1.0.1"
     )
     
     args = parser.parse_args()

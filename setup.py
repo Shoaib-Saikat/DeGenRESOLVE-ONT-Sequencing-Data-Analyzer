@@ -23,7 +23,7 @@ def read_readme():
 
 setup(
     name="degenresolve",
-    version="1.0.0",
+    version="1.0.1",
     author="Shoaib Saikat",
     author_email="saikatshoaib@gmail.com",
     description="ONT Sequencing Data Analyzer with PyQt5 GUI",

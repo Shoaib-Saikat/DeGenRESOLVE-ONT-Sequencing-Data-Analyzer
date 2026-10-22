@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-# DeGenRESOLVE - Offline Installer Builder  v1.0.0
+# DeGenRESOLVE - Offline Installer Builder  v1.0.1
 # =============================================================================
 # PURPOSE
 #   Run ONCE on an internet-connected machine.
@@ -18,13 +18,13 @@
 #   bash create_offline_bundle.sh [--output-dir DIR]
 #
 # OUTPUT
-#   degenresolve_offline_bundle_1.0.0.tar.gz
+#   degenresolve_offline_bundle_1.0.1.tar.gz
 #     install.sh - uninstall.sh - miniconda/ - env/ - app/
 # =============================================================================
 set -euo pipefail
 
 APP_NAME="degenresolve"
-APP_VERSION="1.0.0"
+APP_VERSION="1.0.1"
 BUILD_ENV_NAME="${APP_NAME}_build_$$"
 BUNDLE_DIR="$(pwd)/${APP_NAME}_bundle"
 SCRIPT_DIR_SELF="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -438,7 +438,7 @@ chmod +x "$BUNDLE_DIR/uninstall.sh"
 success "uninstall.sh copied."
 
 cat > "$BUNDLE_DIR/INSTALL_README.txt" << 'README_EOF'
-DeGenRESOLVE Offline Bundle v1.0.0
+DeGenRESOLVE Offline Bundle v1.0.1
 ====================================
 INSTALL:   bash install.sh
 LAUNCH:    bash ~/degenresolve/run_degenresolve.sh

@@ -435,7 +435,7 @@ The large panel on the right is an embedded web browser (Chromium via QtWebEngin
   | Indels | Insertion and deletion resolution summary |
   | Consensus | Final consensus sequence length and ambiguity count |
   | Output Files | Clickable links to every output file with file size |
-  | Environment & Versions | DeGenRESOLVE v1.0.0 and all tool versions in pipeline-execution order |
+  | Environment & Versions | DeGenRESOLVE v1.0.1 and all tool versions in pipeline-execution order |
 
 - A **run summary HTML** if no barcode is selected (overview of all barcodes).
 

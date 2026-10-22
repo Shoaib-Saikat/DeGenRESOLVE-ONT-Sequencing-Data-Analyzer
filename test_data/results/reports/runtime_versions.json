@@ -1,6 +1,6 @@
 {
-  "run_date": "2026-08-31T14:38:42Z",
-  "app_version": "1.0.0",
+  "run_date": "2026-10-05T17:40:06Z",
+  "app_version": "1.0.1",
   "os": "Linux 6.14.0-37-generic x86_64",
   "python": "Python 3.10.21",
   "samtools": "samtools 1.24",
@@ -10,22 +10,17 @@
   "seqtk": "Version: 1.5-r133",
   "porechop": "0.2.4",
   "qualimap": "v.2.2.2-dev",
-  "java": "Picked up JAVA_TOOL_OPTIONS:  -Djava.awt.headless=true",
+  "java": "openjdk version 25.0.2-internal 2026-01-20",
   "NanoPlot": "NanoPlot 1.47.2",
   "pysam": "0.24.0",
   "biopython": "1.88",
   "numpy": "2.2.6",
   "PyQt5": "5.15.11",
   "version_match": {
-    "status": "DIFFERS",
+    "status": "MATCHES BUNDLE",
     "bundle_date": "2026-08-25T07:42:52Z",
     "compared": 14,
     "not_comparable": [],
-    "differences": {
-      "java": {
-        "runtime": "Picked up JAVA_TOOL_OPTIONS:  -Djava.awt.headless=true",
-        "bundled": "openjdk version 25.0.2-internal 2026-01-20"
-      }
-    }
+    "differences": {}
   }
 }

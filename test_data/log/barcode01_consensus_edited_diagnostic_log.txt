@@ -1,6 +1,6 @@
 CONSENSUS DEGENERACY RESOLUTION LOG
 ========================================================================================================================================================================================================
-Generated: 2026-08-31 20:43:37
+Generated: 2026-10-05 23:44:18
 Consensus File: ./barcode01_consensus.fasta
 Reference File: ./reference/infA_references.fasta
 BAM File: temp_barcode01/barcode01.bam
@@ -18,14 +18,14 @@ Strict Read-End: False
 
 SEGMENT MAPPING:
 ------------------------------------------------------------
-H9_NC_004908.1 -> H9_NC_004908.1
-N2_ON497150.1 -> N2_ON497150.1
-PB2_OP023708.1 -> PB2_OP023708.1
-PB1_OP028538.1 -> PB1_OP028538.1
-PA_OP023666.1 -> PA_OP023666.1
-NP_OM938209.1 -> NP_OM938209.1
-MP_OP023633.1 -> MP_OP023633.1
-NS_OP023561.1 -> NS_OP023561.1
+H9_NC_004908.1 -> H9_NC_004908.1 | read identity to reference: 85.2%
+N2_ON497150.1 -> N2_ON497150.1 | read identity to reference: 92.7%
+PB2_OP023708.1 -> PB2_OP023708.1 | read identity to reference: 87.6%
+PB1_OP028538.1 -> PB1_OP028538.1 | read identity to reference: 85.4%
+PA_OP023666.1 -> PA_OP023666.1 | read identity to reference: 88.2%
+NP_OM938209.1 -> NP_OM938209.1 | read identity to reference: 87.9%
+MP_OP023633.1 -> MP_OP023633.1 | read identity to reference: 86.6%
+NS_OP023561.1 -> NS_OP023561.1 | read identity to reference: 88.0%
 
 Segment	Cons_Pos	Genomic_Pos	Original	New	Status	Coverage	Usable_Coverage	A	C	G	T	INS	DEL	Major_Base	Second_Base	Major_AF%	Second_AF%	Delta%	Fwd	Rev	Strand_Balance	HP_Len	HP_Dist	ReadEnd_Score	Warnings	Decision	Reason
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -581,7 +581,7 @@ NS_OP023561.1	525	525	R	A	CHANGED	3699	3566	2499	44	1013	10	38	40	A	G	70.1	28.4	
 NS_OP023561.1	545	545	R	G	CHANGED	3719	3376	1076	64	2106	130	12	78	G	A	62.4	31.9	30.5	1681	1695	0.976	5	4	0.020	homopolymer(len=5,dist=4)	RESOLVE	Resolve to G: 62.4% vs 31.9%
 NS_OP023561.1	602	602	R	G	CHANGED	3967	3658	956	8	2672	22	21	83	G	A	73.0	26.1	46.9	1784	1874	0.909	0	6	0.020	-	RESOLVE	Resolve to G: 73.0% vs 26.1%
 NS_OP023561.1	633	633	R	A	CHANGED	4062	3924	2773	46	1101	4	15	27	A	G	70.7	28.1	42.6	1920	2004	0.901	0	6	0.013	-	RESOLVE	Resolve to A: 70.7% vs 28.1%
-NS_OP023561.1	645	645	R	G	CHANGED	4070	2745	961	5	1770	9	3	1183	G	A	64.5	35.0	29.5	1733	1012	0.448	0	6	0.019	-	RESOLVE	Resolve to G: 64.5% vs 35.0%
+NS_OP023561.1	645	645	R	R	UNCHANGED	4070	2745	961	5	1770	9	3	1183	G	A	0.0	0.0	0.0	1733	1012	0.448	0	6	0.019	-	KEEP	Ambiguous: deletion in 30.1% of reads (1183 of 3928); the remaining bases are not used for a call
 NS_OP023561.1	660	660	Y	T	CHANGED	4168	4079	15	1157	7	2900	16	51	T	C	71.1	28.4	42.7	2003	2076	0.986	0	6	0.020	-	RESOLVE	Resolve to T: 71.1% vs 28.4%
 NS_OP023561.1	802	802	Y	C	CHANGED	4381	4247	0	3095	1	1151	27	31	C	T	72.9	27.1	45.8	2048	2199	0.970	0	6	0.672	-	RESOLVE	Resolve to C: 72.9% vs 27.1%
 NS_OP023561.1	816	816	R	A	CHANGED	4365	4080	2925	5	1139	11	9	163	A	G	71.7	27.9	43.8	1910	2170	0.892	0	6	0.728	-	RESOLVE	Resolve to A: 71.7% vs 27.9%
@@ -610,10 +610,10 @@ at sup so bcftools can model them, or inspect in IGV.
 SUMMARY STATISTICS
 ========================================================================================================================================================================================================
 Total degeneracies processed: 556
-Total degeneracies resolved: 220
+Total degeneracies resolved: 219
 Total resolved to deletions: 0
-Total kept unchanged: 336
-Resolution rate: 39.6%
+Total kept unchanged: 337
+Resolution rate: 39.4%
 Strand bias warnings: 0
 Homopolymer warnings: 23
 Read-end enrichment warnings: 16
@@ -677,9 +677,9 @@ Per-segment statistics:
     Resolution rate: 22.2%
   NS_OP023561.1:
     Total degeneracies: 28
-    Resolved: 27
-    Kept: 1
+    Resolved: 26
+    Kept: 2
     Strand bias warnings: 0
     Homopolymer warnings: 3
     Read-end enrichment warnings: 1
-    Resolution rate: 96.4%
+    Resolution rate: 92.9%

@@ -1,0 +1,660 @@
+2026-10-05 23:40:11,832 NanoPlot 1.47.2 started with arguments Namespace(threads=4, verbose=False, store=True, raw=False, huge=False, outdir='./results/step_1_raw_read_qc_nanoplot/barcode09', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=True, title='barcode09 Raw Reads', font_scale=1, dpi=300, hide_stats=False, fastq=['fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_0.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_100.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_101.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_102.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_103.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_104.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_105.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_106.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_107.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_108.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_109.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_10.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_110.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_111.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_112.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_113.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_114.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_115.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_116.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_117.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_118.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_119.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_11.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_120.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_121.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_122.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_123.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_124.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_125.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_126.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_127.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_128.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_129.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_12.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_130.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_131.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_132.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_133.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_134.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_135.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_136.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_137.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_138.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_139.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_13.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_140.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_141.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_142.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_143.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_144.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_14.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_15.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_16.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_17.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_18.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_19.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_1.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_20.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_21.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_22.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_23.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_24.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_25.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_26.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_27.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_28.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_29.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_2.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_30.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_31.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_32.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_33.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_34.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_35.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_36.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_37.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_38.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_39.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_3.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_40.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_41.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_42.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_43.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_44.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_45.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_46.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_47.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_48.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_49.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_4.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_50.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_51.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_52.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_53.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_54.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_55.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_56.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_57.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_58.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_59.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_5.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_60.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_61.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_62.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_63.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_64.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_65.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_66.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_67.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_68.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_69.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_6.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_70.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_71.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_72.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_73.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_74.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_75.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_76.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_77.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_78.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_79.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_7.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_80.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_81.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_82.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_83.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_84.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_85.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_86.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_87.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_88.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_89.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_8.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_90.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_91.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_92.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_93.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_94.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_95.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_96.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_97.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_98.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_99.fastq.gz', 'fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_9.fastq.gz'], fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=None, cram=None, pickle=None, feather=None, path='./results/step_1_raw_read_qc_nanoplot/barcode09/')
+2026-10-05 23:40:11,832 Python version is: 3.10.21 | packaged by conda-forge | (main, Aug 21 2026, 22:42:31) [GCC 14.4.0]
+2026-10-05 23:40:11,855 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,855 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,855 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,855 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,856 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_0.fastq.gz
+2026-10-05 23:40:11,856 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_102.fastq.gz
+2026-10-05 23:40:11,856 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_101.fastq.gz
+2026-10-05 23:40:11,856 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_100.fastq.gz
+2026-10-05 23:40:11,869 Reduced DataFrame memory usage from 0.0012359619140625Mb to 0.0012359619140625Mb
+2026-10-05 23:40:11,870 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,870 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_103.fastq.gz
+2026-10-05 23:40:11,871 Reduced DataFrame memory usage from 0.0019073486328125Mb to 0.0019073486328125Mb
+2026-10-05 23:40:11,872 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,872 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_104.fastq.gz
+2026-10-05 23:40:11,873 Reduced DataFrame memory usage from 0.00164794921875Mb to 0.00164794921875Mb
+2026-10-05 23:40:11,873 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,874 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_105.fastq.gz
+2026-10-05 23:40:11,877 Reduced DataFrame memory usage from 0.0011749267578125Mb to 0.0011749267578125Mb
+2026-10-05 23:40:11,877 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,877 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_106.fastq.gz
+2026-10-05 23:40:11,878 Reduced DataFrame memory usage from 0.0019989013671875Mb to 0.0019989013671875Mb
+2026-10-05 23:40:11,878 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,878 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_107.fastq.gz
+2026-10-05 23:40:11,881 Reduced DataFrame memory usage from 0.0013885498046875Mb to 0.0013885498046875Mb
+2026-10-05 23:40:11,881 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,881 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_108.fastq.gz
+2026-10-05 23:40:11,885 Reduced DataFrame memory usage from 0.002044677734375Mb to 0.002044677734375Mb
+2026-10-05 23:40:11,885 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,885 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_109.fastq.gz
+2026-10-05 23:40:11,887 Reduced DataFrame memory usage from 0.002105712890625Mb to 0.002105712890625Mb
+2026-10-05 23:40:11,887 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,887 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_10.fastq.gz
+2026-10-05 23:40:11,890 Reduced DataFrame memory usage from 0.0015411376953125Mb to 0.0015411376953125Mb
+2026-10-05 23:40:11,890 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,890 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_110.fastq.gz
+2026-10-05 23:40:11,894 Reduced DataFrame memory usage from 0.0019989013671875Mb to 0.0019989013671875Mb
+2026-10-05 23:40:11,894 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,894 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_111.fastq.gz
+2026-10-05 23:40:11,895 Reduced DataFrame memory usage from 0.0019073486328125Mb to 0.0019073486328125Mb
+2026-10-05 23:40:11,895 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,895 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_112.fastq.gz
+2026-10-05 23:40:11,898 Reduced DataFrame memory usage from 0.002655029296875Mb to 0.002655029296875Mb
+2026-10-05 23:40:11,899 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,899 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_113.fastq.gz
+2026-10-05 23:40:11,899 Reduced DataFrame memory usage from 0.001983642578125Mb to 0.001983642578125Mb
+2026-10-05 23:40:11,899 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,899 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_114.fastq.gz
+2026-10-05 23:40:11,901 Reduced DataFrame memory usage from 0.001708984375Mb to 0.001708984375Mb
+2026-10-05 23:40:11,902 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,902 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_115.fastq.gz
+2026-10-05 23:40:11,905 Reduced DataFrame memory usage from 0.0011444091796875Mb to 0.0011444091796875Mb
+2026-10-05 23:40:11,905 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,905 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_116.fastq.gz
+2026-10-05 23:40:11,906 Reduced DataFrame memory usage from 0.0017547607421875Mb to 0.0017547607421875Mb
+2026-10-05 23:40:11,906 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,906 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_117.fastq.gz
+2026-10-05 23:40:11,910 Reduced DataFrame memory usage from 0.00164794921875Mb to 0.00164794921875Mb
+2026-10-05 23:40:11,911 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,911 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_118.fastq.gz
+2026-10-05 23:40:11,912 Reduced DataFrame memory usage from 0.0018768310546875Mb to 0.0018768310546875Mb
+2026-10-05 23:40:11,913 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,913 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_119.fastq.gz
+2026-10-05 23:40:11,913 Reduced DataFrame memory usage from 0.0015106201171875Mb to 0.0015106201171875Mb
+2026-10-05 23:40:11,914 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,914 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_11.fastq.gz
+2026-10-05 23:40:11,914 Reduced DataFrame memory usage from 0.001739501953125Mb to 0.001739501953125Mb
+2026-10-05 23:40:11,914 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,914 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_120.fastq.gz
+2026-10-05 23:40:11,920 Reduced DataFrame memory usage from 0.0011444091796875Mb to 0.0011444091796875Mb
+2026-10-05 23:40:11,920 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,920 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_121.fastq.gz
+2026-10-05 23:40:11,923 Reduced DataFrame memory usage from 0.00128173828125Mb to 0.00128173828125Mb
+2026-10-05 23:40:11,923 Reduced DataFrame memory usage from 0.0013580322265625Mb to 0.0013580322265625Mb
+2026-10-05 23:40:11,924 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,924 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,924 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_122.fastq.gz
+2026-10-05 23:40:11,924 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_123.fastq.gz
+2026-10-05 23:40:11,925 Reduced DataFrame memory usage from 0.0026702880859375Mb to 0.0026702880859375Mb
+2026-10-05 23:40:11,925 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,926 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_124.fastq.gz
+2026-10-05 23:40:11,928 Reduced DataFrame memory usage from 0.001617431640625Mb to 0.001617431640625Mb
+2026-10-05 23:40:11,929 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,929 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_125.fastq.gz
+2026-10-05 23:40:11,932 Reduced DataFrame memory usage from 0.00091552734375Mb to 0.00091552734375Mb
+2026-10-05 23:40:11,932 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,933 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_126.fastq.gz
+2026-10-05 23:40:11,933 Reduced DataFrame memory usage from 0.0015716552734375Mb to 0.0015716552734375Mb
+2026-10-05 23:40:11,934 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,934 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_127.fastq.gz
+2026-10-05 23:40:11,936 Reduced DataFrame memory usage from 0.001800537109375Mb to 0.001800537109375Mb
+2026-10-05 23:40:11,937 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,937 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_128.fastq.gz
+2026-10-05 23:40:11,940 Reduced DataFrame memory usage from 0.0016021728515625Mb to 0.0016021728515625Mb
+2026-10-05 23:40:11,941 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,941 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_129.fastq.gz
+2026-10-05 23:40:11,942 Reduced DataFrame memory usage from 0.0015716552734375Mb to 0.0015716552734375Mb
+2026-10-05 23:40:11,942 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,942 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_12.fastq.gz
+2026-10-05 23:40:11,945 Reduced DataFrame memory usage from 0.001739501953125Mb to 0.001739501953125Mb
+2026-10-05 23:40:11,946 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,946 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_130.fastq.gz
+2026-10-05 23:40:11,947 Reduced DataFrame memory usage from 0.0014190673828125Mb to 0.0014190673828125Mb
+2026-10-05 23:40:11,948 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,948 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_131.fastq.gz
+2026-10-05 23:40:11,950 Reduced DataFrame memory usage from 0.0011749267578125Mb to 0.0011749267578125Mb
+2026-10-05 23:40:11,950 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,950 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_132.fastq.gz
+2026-10-05 23:40:11,956 Reduced DataFrame memory usage from 0.0027923583984375Mb to 0.0027923583984375Mb
+2026-10-05 23:40:11,956 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,956 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_133.fastq.gz
+2026-10-05 23:40:11,956 Reduced DataFrame memory usage from 0.0006256103515625Mb to 0.0006256103515625Mb
+2026-10-05 23:40:11,956 Reduced DataFrame memory usage from 0.0013580322265625Mb to 0.0013580322265625Mb
+2026-10-05 23:40:11,957 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,957 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,957 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_134.fastq.gz
+2026-10-05 23:40:11,957 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_135.fastq.gz
+2026-10-05 23:40:11,957 Reduced DataFrame memory usage from 0.001373291015625Mb to 0.001373291015625Mb
+2026-10-05 23:40:11,958 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,958 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_136.fastq.gz
+2026-10-05 23:40:11,963 Reduced DataFrame memory usage from 0.0013275146484375Mb to 0.0013275146484375Mb
+2026-10-05 23:40:11,963 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,963 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_137.fastq.gz
+2026-10-05 23:40:11,964 Reduced DataFrame memory usage from 0.00115966796875Mb to 0.00115966796875Mb
+2026-10-05 23:40:11,964 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,964 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_138.fastq.gz
+2026-10-05 23:40:11,966 Reduced DataFrame memory usage from 0.0010833740234375Mb to 0.0010833740234375Mb
+2026-10-05 23:40:11,966 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,966 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_139.fastq.gz
+2026-10-05 23:40:11,966 Reduced DataFrame memory usage from 0.001220703125Mb to 0.001220703125Mb
+2026-10-05 23:40:11,966 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,966 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_13.fastq.gz
+2026-10-05 23:40:11,969 Reduced DataFrame memory usage from 0.0009307861328125Mb to 0.0009307861328125Mb
+2026-10-05 23:40:11,970 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,970 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_140.fastq.gz
+2026-10-05 23:40:11,970 Reduced DataFrame memory usage from 0.000701904296875Mb to 0.000701904296875Mb
+2026-10-05 23:40:11,970 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,970 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_141.fastq.gz
+2026-10-05 23:40:11,972 Reduced DataFrame memory usage from 0.0008087158203125Mb to 0.0008087158203125Mb
+2026-10-05 23:40:11,972 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,972 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_142.fastq.gz
+2026-10-05 23:40:11,975 Reduced DataFrame memory usage from 0.000823974609375Mb to 0.000823974609375Mb
+2026-10-05 23:40:11,975 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,975 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_143.fastq.gz
+2026-10-05 23:40:11,976 Reduced DataFrame memory usage from 0.0005340576171875Mb to 0.0005340576171875Mb
+2026-10-05 23:40:11,976 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,976 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_144.fastq.gz
+2026-10-05 23:40:11,977 Reduced DataFrame memory usage from 0.00286865234375Mb to 0.00286865234375Mb
+2026-10-05 23:40:11,977 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,977 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_14.fastq.gz
+2026-10-05 23:40:11,979 Reduced DataFrame memory usage from 0.0001373291015625Mb to 0.0001373291015625Mb
+2026-10-05 23:40:11,979 Reduced DataFrame memory usage from 0.0006256103515625Mb to 0.0006256103515625Mb
+2026-10-05 23:40:11,979 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,979 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_15.fastq.gz
+2026-10-05 23:40:11,979 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,980 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_16.fastq.gz
+2026-10-05 23:40:11,981 Reduced DataFrame memory usage from 0.0008544921875Mb to 0.0008544921875Mb
+2026-10-05 23:40:11,981 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,982 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_17.fastq.gz
+2026-10-05 23:40:11,988 Reduced DataFrame memory usage from 0.002685546875Mb to 0.002685546875Mb
+2026-10-05 23:40:11,988 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,988 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_18.fastq.gz
+2026-10-05 23:40:11,991 Reduced DataFrame memory usage from 0.0027008056640625Mb to 0.0027008056640625Mb
+2026-10-05 23:40:11,992 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,992 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_19.fastq.gz
+2026-10-05 23:40:11,994 Reduced DataFrame memory usage from 0.002593994140625Mb to 0.002593994140625Mb
+2026-10-05 23:40:11,994 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,994 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_1.fastq.gz
+2026-10-05 23:40:11,996 Reduced DataFrame memory usage from 0.002899169921875Mb to 0.002899169921875Mb
+2026-10-05 23:40:11,997 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:11,997 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_20.fastq.gz
+2026-10-05 23:40:12,000 Reduced DataFrame memory usage from 0.0024871826171875Mb to 0.0024871826171875Mb
+2026-10-05 23:40:12,000 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,000 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_21.fastq.gz
+2026-10-05 23:40:12,003 Reduced DataFrame memory usage from 0.002410888671875Mb to 0.002410888671875Mb
+2026-10-05 23:40:12,003 Reduced DataFrame memory usage from 0.0023040771484375Mb to 0.0023040771484375Mb
+2026-10-05 23:40:12,003 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,003 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_22.fastq.gz
+2026-10-05 23:40:12,003 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,003 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_23.fastq.gz
+2026-10-05 23:40:12,010 Reduced DataFrame memory usage from 0.00335693359375Mb to 0.00335693359375Mb
+2026-10-05 23:40:12,010 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,010 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_24.fastq.gz
+2026-10-05 23:40:12,015 Reduced DataFrame memory usage from 0.0032958984375Mb to 0.0032958984375Mb
+2026-10-05 23:40:12,016 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,016 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_25.fastq.gz
+2026-10-05 23:40:12,020 Reduced DataFrame memory usage from 0.0035400390625Mb to 0.0035400390625Mb
+2026-10-05 23:40:12,020 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,020 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_26.fastq.gz
+2026-10-05 23:40:12,021 Reduced DataFrame memory usage from 0.002532958984375Mb to 0.002532958984375Mb
+2026-10-05 23:40:12,021 Reduced DataFrame memory usage from 0.0033416748046875Mb to 0.0033416748046875Mb
+2026-10-05 23:40:12,021 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,021 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,021 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_27.fastq.gz
+2026-10-05 23:40:12,021 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_28.fastq.gz
+2026-10-05 23:40:12,030 Reduced DataFrame memory usage from 0.0019073486328125Mb to 0.0019073486328125Mb
+2026-10-05 23:40:12,030 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,030 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_29.fastq.gz
+2026-10-05 23:40:12,031 Reduced DataFrame memory usage from 0.00262451171875Mb to 0.00262451171875Mb
+2026-10-05 23:40:12,031 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,031 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_2.fastq.gz
+2026-10-05 23:40:12,031 Reduced DataFrame memory usage from 0.0030517578125Mb to 0.0030517578125Mb
+2026-10-05 23:40:12,032 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,032 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_30.fastq.gz
+2026-10-05 23:40:12,039 Reduced DataFrame memory usage from 0.003082275390625Mb to 0.003082275390625Mb
+2026-10-05 23:40:12,040 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,040 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_31.fastq.gz
+2026-10-05 23:40:12,040 Reduced DataFrame memory usage from 0.002197265625Mb to 0.002197265625Mb
+2026-10-05 23:40:12,041 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,041 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_32.fastq.gz
+2026-10-05 23:40:12,041 Reduced DataFrame memory usage from 0.002716064453125Mb to 0.002716064453125Mb
+2026-10-05 23:40:12,041 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,041 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_33.fastq.gz
+2026-10-05 23:40:12,047 Reduced DataFrame memory usage from 0.0028076171875Mb to 0.0028076171875Mb
+2026-10-05 23:40:12,047 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,047 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_34.fastq.gz
+2026-10-05 23:40:12,051 Reduced DataFrame memory usage from 0.002685546875Mb to 0.002685546875Mb
+2026-10-05 23:40:12,052 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,052 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_35.fastq.gz
+2026-10-05 23:40:12,054 Reduced DataFrame memory usage from 0.0028839111328125Mb to 0.0028839111328125Mb
+2026-10-05 23:40:12,054 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,054 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_36.fastq.gz
+2026-10-05 23:40:12,056 Reduced DataFrame memory usage from 0.0030670166015625Mb to 0.0030670166015625Mb
+2026-10-05 23:40:12,057 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,057 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_37.fastq.gz
+2026-10-05 23:40:12,058 Reduced DataFrame memory usage from 0.002960205078125Mb to 0.002960205078125Mb
+2026-10-05 23:40:12,059 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,059 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_38.fastq.gz
+2026-10-05 23:40:12,063 Reduced DataFrame memory usage from 0.0027008056640625Mb to 0.0027008056640625Mb
+2026-10-05 23:40:12,063 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,063 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_39.fastq.gz
+2026-10-05 23:40:12,070 Reduced DataFrame memory usage from 0.00274658203125Mb to 0.00274658203125Mb
+2026-10-05 23:40:12,070 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,071 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_3.fastq.gz
+2026-10-05 23:40:12,071 Reduced DataFrame memory usage from 0.0026092529296875Mb to 0.0026092529296875Mb
+2026-10-05 23:40:12,071 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,071 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_40.fastq.gz
+2026-10-05 23:40:12,071 Reduced DataFrame memory usage from 0.00262451171875Mb to 0.00262451171875Mb
+2026-10-05 23:40:12,072 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,072 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_41.fastq.gz
+2026-10-05 23:40:12,076 Reduced DataFrame memory usage from 0.002593994140625Mb to 0.002593994140625Mb
+2026-10-05 23:40:12,076 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,076 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_42.fastq.gz
+2026-10-05 23:40:12,084 Reduced DataFrame memory usage from 0.0027008056640625Mb to 0.0027008056640625Mb
+2026-10-05 23:40:12,085 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,085 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_43.fastq.gz
+2026-10-05 23:40:12,085 Reduced DataFrame memory usage from 0.0023345947265625Mb to 0.0023345947265625Mb
+2026-10-05 23:40:12,086 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,086 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_44.fastq.gz
+2026-10-05 23:40:12,091 Reduced DataFrame memory usage from 0.0031890869140625Mb to 0.0031890869140625Mb
+2026-10-05 23:40:12,091 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,092 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_45.fastq.gz
+2026-10-05 23:40:12,094 Reduced DataFrame memory usage from 0.0031585693359375Mb to 0.0031585693359375Mb
+2026-10-05 23:40:12,094 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,094 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_46.fastq.gz
+2026-10-05 23:40:12,099 Reduced DataFrame memory usage from 0.0032196044921875Mb to 0.0032196044921875Mb
+2026-10-05 23:40:12,099 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,099 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_47.fastq.gz
+2026-10-05 23:40:12,099 Reduced DataFrame memory usage from 0.0025634765625Mb to 0.0025634765625Mb
+2026-10-05 23:40:12,100 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,100 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_48.fastq.gz
+2026-10-05 23:40:12,106 Reduced DataFrame memory usage from 0.0029296875Mb to 0.0029296875Mb
+2026-10-05 23:40:12,106 Reduced DataFrame memory usage from 0.00286865234375Mb to 0.00286865234375Mb
+2026-10-05 23:40:12,106 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,106 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_49.fastq.gz
+2026-10-05 23:40:12,106 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,106 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_4.fastq.gz
+2026-10-05 23:40:12,112 Reduced DataFrame memory usage from 0.0019683837890625Mb to 0.0019683837890625Mb
+2026-10-05 23:40:12,113 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,113 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_50.fastq.gz
+2026-10-05 23:40:12,114 Reduced DataFrame memory usage from 0.001922607421875Mb to 0.001922607421875Mb
+2026-10-05 23:40:12,115 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,115 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_51.fastq.gz
+2026-10-05 23:40:12,120 Reduced DataFrame memory usage from 0.00347900390625Mb to 0.00347900390625Mb
+2026-10-05 23:40:12,120 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,120 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_52.fastq.gz
+2026-10-05 23:40:12,122 Reduced DataFrame memory usage from 0.0030975341796875Mb to 0.0030975341796875Mb
+2026-10-05 23:40:12,122 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,122 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_53.fastq.gz
+2026-10-05 23:40:12,129 Reduced DataFrame memory usage from 0.002777099609375Mb to 0.002777099609375Mb
+2026-10-05 23:40:12,130 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,130 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_54.fastq.gz
+2026-10-05 23:40:12,130 Reduced DataFrame memory usage from 0.0030059814453125Mb to 0.0030059814453125Mb
+2026-10-05 23:40:12,131 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,131 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_55.fastq.gz
+2026-10-05 23:40:12,137 Reduced DataFrame memory usage from 0.002899169921875Mb to 0.002899169921875Mb
+2026-10-05 23:40:12,137 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,137 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_56.fastq.gz
+2026-10-05 23:40:12,139 Reduced DataFrame memory usage from 0.0026397705078125Mb to 0.0026397705078125Mb
+2026-10-05 23:40:12,139 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,139 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_57.fastq.gz
+2026-10-05 23:40:12,141 Reduced DataFrame memory usage from 0.002105712890625Mb to 0.002105712890625Mb
+2026-10-05 23:40:12,142 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,142 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_58.fastq.gz
+2026-10-05 23:40:12,145 Reduced DataFrame memory usage from 0.0017547607421875Mb to 0.0017547607421875Mb
+2026-10-05 23:40:12,145 Reduced DataFrame memory usage from 0.0025787353515625Mb to 0.0025787353515625Mb
+2026-10-05 23:40:12,145 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,146 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_59.fastq.gz
+2026-10-05 23:40:12,146 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,146 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_5.fastq.gz
+2026-10-05 23:40:12,150 Reduced DataFrame memory usage from 0.0024566650390625Mb to 0.0024566650390625Mb
+2026-10-05 23:40:12,151 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,151 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_60.fastq.gz
+2026-10-05 23:40:12,155 Reduced DataFrame memory usage from 0.002197265625Mb to 0.002197265625Mb
+2026-10-05 23:40:12,156 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,156 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_61.fastq.gz
+2026-10-05 23:40:12,156 Reduced DataFrame memory usage from 0.0025787353515625Mb to 0.0025787353515625Mb
+2026-10-05 23:40:12,157 Reduced DataFrame memory usage from 0.002410888671875Mb to 0.002410888671875Mb
+2026-10-05 23:40:12,157 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,157 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,157 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_62.fastq.gz
+2026-10-05 23:40:12,157 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_63.fastq.gz
+2026-10-05 23:40:12,164 Reduced DataFrame memory usage from 0.002227783203125Mb to 0.002227783203125Mb
+2026-10-05 23:40:12,164 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,164 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_64.fastq.gz
+2026-10-05 23:40:12,167 Reduced DataFrame memory usage from 0.0023956298828125Mb to 0.0023956298828125Mb
+2026-10-05 23:40:12,167 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,167 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_65.fastq.gz
+2026-10-05 23:40:12,171 Reduced DataFrame memory usage from 0.0023651123046875Mb to 0.0023651123046875Mb
+2026-10-05 23:40:12,171 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,171 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_66.fastq.gz
+2026-10-05 23:40:12,173 Reduced DataFrame memory usage from 0.00262451171875Mb to 0.00262451171875Mb
+2026-10-05 23:40:12,174 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,174 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_67.fastq.gz
+2026-10-05 23:40:12,179 Reduced DataFrame memory usage from 0.002410888671875Mb to 0.002410888671875Mb
+2026-10-05 23:40:12,180 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,180 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_68.fastq.gz
+2026-10-05 23:40:12,182 Reduced DataFrame memory usage from 0.0015716552734375Mb to 0.0015716552734375Mb
+2026-10-05 23:40:12,182 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,182 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_69.fastq.gz
+2026-10-05 23:40:12,185 Reduced DataFrame memory usage from 0.0029296875Mb to 0.0029296875Mb
+2026-10-05 23:40:12,185 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,185 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_6.fastq.gz
+2026-10-05 23:40:12,189 Reduced DataFrame memory usage from 0.00262451171875Mb to 0.00262451171875Mb
+2026-10-05 23:40:12,190 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,190 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_70.fastq.gz
+2026-10-05 23:40:12,196 Reduced DataFrame memory usage from 0.0024566650390625Mb to 0.0024566650390625Mb
+2026-10-05 23:40:12,196 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,196 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_71.fastq.gz
+2026-10-05 23:40:12,196 Reduced DataFrame memory usage from 0.0030670166015625Mb to 0.0030670166015625Mb
+2026-10-05 23:40:12,197 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,197 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_72.fastq.gz
+2026-10-05 23:40:12,201 Reduced DataFrame memory usage from 0.003173828125Mb to 0.003173828125Mb
+2026-10-05 23:40:12,201 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,201 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_73.fastq.gz
+2026-10-05 23:40:12,208 Reduced DataFrame memory usage from 0.002960205078125Mb to 0.002960205078125Mb
+2026-10-05 23:40:12,208 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,208 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_74.fastq.gz
+2026-10-05 23:40:12,210 Reduced DataFrame memory usage from 0.0027923583984375Mb to 0.0027923583984375Mb
+2026-10-05 23:40:12,211 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,211 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_75.fastq.gz
+2026-10-05 23:40:12,213 Reduced DataFrame memory usage from 0.0027923583984375Mb to 0.0027923583984375Mb
+2026-10-05 23:40:12,214 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,214 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_76.fastq.gz
+2026-10-05 23:40:12,219 Reduced DataFrame memory usage from 0.001708984375Mb to 0.001708984375Mb
+2026-10-05 23:40:12,219 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,219 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_77.fastq.gz
+2026-10-05 23:40:12,219 Reduced DataFrame memory usage from 0.0030975341796875Mb to 0.0030975341796875Mb
+2026-10-05 23:40:12,220 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,220 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_78.fastq.gz
+2026-10-05 23:40:12,225 Reduced DataFrame memory usage from 0.00274658203125Mb to 0.00274658203125Mb
+2026-10-05 23:40:12,226 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,226 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_79.fastq.gz
+2026-10-05 23:40:12,231 Reduced DataFrame memory usage from 0.0029754638671875Mb to 0.0029754638671875Mb
+2026-10-05 23:40:12,231 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,232 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_7.fastq.gz
+2026-10-05 23:40:12,232 Reduced DataFrame memory usage from 0.002777099609375Mb to 0.002777099609375Mb
+2026-10-05 23:40:12,232 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,232 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_80.fastq.gz
+2026-10-05 23:40:12,238 Reduced DataFrame memory usage from 0.0030364990234375Mb to 0.0030364990234375Mb
+2026-10-05 23:40:12,238 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,238 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_81.fastq.gz
+2026-10-05 23:40:12,243 Reduced DataFrame memory usage from 0.001678466796875Mb to 0.001678466796875Mb
+2026-10-05 23:40:12,243 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,243 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_82.fastq.gz
+2026-10-05 23:40:12,245 Reduced DataFrame memory usage from 0.0032806396484375Mb to 0.0032806396484375Mb
+2026-10-05 23:40:12,245 Reduced DataFrame memory usage from 0.0027313232421875Mb to 0.0027313232421875Mb
+2026-10-05 23:40:12,246 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,246 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_83.fastq.gz
+2026-10-05 23:40:12,246 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,246 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_84.fastq.gz
+2026-10-05 23:40:12,256 Reduced DataFrame memory usage from 0.0023956298828125Mb to 0.0023956298828125Mb
+2026-10-05 23:40:12,256 Reduced DataFrame memory usage from 0.002899169921875Mb to 0.002899169921875Mb
+2026-10-05 23:40:12,256 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,256 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_85.fastq.gz
+2026-10-05 23:40:12,256 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,257 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_86.fastq.gz
+2026-10-05 23:40:12,258 Reduced DataFrame memory usage from 0.0026702880859375Mb to 0.0026702880859375Mb
+2026-10-05 23:40:12,259 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,259 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_87.fastq.gz
+2026-10-05 23:40:12,260 Reduced DataFrame memory usage from 0.002288818359375Mb to 0.002288818359375Mb
+2026-10-05 23:40:12,261 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,261 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_88.fastq.gz
+2026-10-05 23:40:12,269 Reduced DataFrame memory usage from 0.0016326904296875Mb to 0.0016326904296875Mb
+2026-10-05 23:40:12,269 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,269 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_89.fastq.gz
+2026-10-05 23:40:12,270 Reduced DataFrame memory usage from 0.0022125244140625Mb to 0.0022125244140625Mb
+2026-10-05 23:40:12,270 Reduced DataFrame memory usage from 0.002349853515625Mb to 0.002349853515625Mb
+2026-10-05 23:40:12,270 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,271 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_8.fastq.gz
+2026-10-05 23:40:12,271 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,271 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_90.fastq.gz
+2026-10-05 23:40:12,275 Reduced DataFrame memory usage from 0.002166748046875Mb to 0.002166748046875Mb
+2026-10-05 23:40:12,275 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,275 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_91.fastq.gz
+2026-10-05 23:40:12,282 Reduced DataFrame memory usage from 0.001800537109375Mb to 0.001800537109375Mb
+2026-10-05 23:40:12,282 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,282 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_92.fastq.gz
+2026-10-05 23:40:12,283 Reduced DataFrame memory usage from 0.0018463134765625Mb to 0.0018463134765625Mb
+2026-10-05 23:40:12,284 Reduced DataFrame memory usage from 0.0020294189453125Mb to 0.0020294189453125Mb
+2026-10-05 23:40:12,284 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,284 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_93.fastq.gz
+2026-10-05 23:40:12,284 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,284 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_94.fastq.gz
+2026-10-05 23:40:12,287 Reduced DataFrame memory usage from 0.001739501953125Mb to 0.001739501953125Mb
+2026-10-05 23:40:12,287 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,287 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_95.fastq.gz
+2026-10-05 23:40:12,290 Reduced DataFrame memory usage from 0.0018157958984375Mb to 0.0018157958984375Mb
+2026-10-05 23:40:12,291 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,291 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_96.fastq.gz
+2026-10-05 23:40:12,295 Reduced DataFrame memory usage from 0.001373291015625Mb to 0.001373291015625Mb
+2026-10-05 23:40:12,295 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,295 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_97.fastq.gz
+2026-10-05 23:40:12,298 Reduced DataFrame memory usage from 0.0020904541015625Mb to 0.0020904541015625Mb
+2026-10-05 23:40:12,299 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,299 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_98.fastq.gz
+2026-10-05 23:40:12,300 Reduced DataFrame memory usage from 0.001708984375Mb to 0.001708984375Mb
+2026-10-05 23:40:12,300 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,301 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_99.fastq.gz
+2026-10-05 23:40:12,301 Reduced DataFrame memory usage from 0.0020294189453125Mb to 0.0020294189453125Mb
+2026-10-05 23:40:12,301 Nanoget: Starting to collect statistics from plain fastq file.
+2026-10-05 23:40:12,301 Nanoget: Decompressing gzipped fastq fastq_pass/barcode09/AZM166_pass_barcode09_c048acf5_dffd94ec_9.fastq.gz
+2026-10-05 23:40:12,308 Reduced DataFrame memory usage from 0.0018768310546875Mb to 0.0018768310546875Mb
+2026-10-05 23:40:12,310 Reduced DataFrame memory usage from 0.001434326171875Mb to 0.001434326171875Mb
+2026-10-05 23:40:12,310 Reduced DataFrame memory usage from 0.0017547607421875Mb to 0.0017547607421875Mb
+2026-10-05 23:40:12,312 Reduced DataFrame memory usage from 0.001983642578125Mb to 0.001983642578125Mb
+2026-10-05 23:40:12,324 Nanoget: Gathered all metrics of 19473 reads
+2026-10-05 23:40:12,335 Calculated statistics
+2026-10-05 23:40:12,336 Using sequenced read lengths for plotting.
+2026-10-05 23:40:12,337 NanoPlot:  Valid color #4CB391.
+2026-10-05 23:40:12,337 NanoPlot:  Valid colormap Greens.
+2026-10-05 23:40:12,338 NanoPlot:  Creating length plots for Read length.
+2026-10-05 23:40:12,338 NanoPlot: Using 19473 reads with read length N50 of 455bp and maximum of 3921bp.
+2026-10-05 23:40:12,482 Using last known good version of chrome
+2026-10-05 23:40:12,485 Chromium init'ed with kwargs {}
+2026-10-05 23:40:12,485 Found chromium path: /home/shoaib/.local/share/choreographer/deps/chrome-linux64/chrome
+2026-10-05 23:40:12,485 Temp directory created: /tmp/tmp0cqz3jqf.
+2026-10-05 23:40:12,485 Opening browser.
+2026-10-05 23:40:12,486 Temp directory created: /tmp/tmpnvfmsbb2.
+2026-10-05 23:40:12,486 Temporary directory at: /tmp/tmpnvfmsbb2
+2026-10-05 23:40:12,951 Conforming 1 to file:///tmp/tmp0cqz3jqf/index.html
+2026-10-05 23:40:20,685 Getting tab from queue (has 1)
+2026-10-05 23:40:20,685 Got 8E82
+2026-10-05 23:40:20,772 Reloading tab 8E82 before return.
+2026-10-05 23:40:20,899 Putting tab 8E82 back (queue size: 0).
+2026-10-05 23:40:20,899 Waiting for all cleanups to finish.
+2026-10-05 23:40:20,900 Exiting Kaleido.
+2026-10-05 23:40:20,900 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:20,900 shutil.rmtree worked.
+2026-10-05 23:40:20,900 Closing browser.
+2026-10-05 23:40:20,905 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:20,905 shutil.rmtree worked.
+2026-10-05 23:40:20,905 Closing browser.
+2026-10-05 23:40:20,905 Cancelling tasks.
+2026-10-05 23:40:20,905 Exiting Kaleido/Choreo.
+2026-10-05 23:40:22,690 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:22,690 shutil.rmtree worked.
+2026-10-05 23:40:22,690 Cancelling tasks.
+2026-10-05 23:40:22,690 Exiting Kaleido/Choreo.
+2026-10-05 23:40:22,692 Could not set DPI metadata for ./results/step_1_raw_read_qc_nanoplot/barcode09/WeightedHistogramReadlength.png: No module named 'PIL'
+2026-10-05 23:40:22,692 Saved ./results/step_1_raw_read_qc_nanoplot/barcode09/WeightedHistogramReadlength.png as png (dpi=300)
+2026-10-05 23:40:22,726 Using last known good version of chrome
+2026-10-05 23:40:22,729 Chromium init'ed with kwargs {}
+2026-10-05 23:40:22,729 Found chromium path: /home/shoaib/.local/share/choreographer/deps/chrome-linux64/chrome
+2026-10-05 23:40:22,729 Temp directory created: /tmp/tmpn62ix0ms.
+2026-10-05 23:40:22,729 Opening browser.
+2026-10-05 23:40:22,729 Temp directory created: /tmp/tmpoq99wws4.
+2026-10-05 23:40:22,729 Temporary directory at: /tmp/tmpoq99wws4
+2026-10-05 23:40:22,918 Conforming 1 to file:///tmp/tmpn62ix0ms/index.html
+2026-10-05 23:40:26,142 Getting tab from queue (has 1)
+2026-10-05 23:40:26,143 Got 991A
+2026-10-05 23:40:26,241 Reloading tab 991A before return.
+2026-10-05 23:40:26,367 Putting tab 991A back (queue size: 0).
+2026-10-05 23:40:26,367 Waiting for all cleanups to finish.
+2026-10-05 23:40:26,367 Exiting Kaleido.
+2026-10-05 23:40:26,368 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:26,368 shutil.rmtree worked.
+2026-10-05 23:40:26,368 Closing browser.
+2026-10-05 23:40:26,371 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:26,371 shutil.rmtree worked.
+2026-10-05 23:40:26,371 Closing browser.
+2026-10-05 23:40:26,371 Cancelling tasks.
+2026-10-05 23:40:26,371 Exiting Kaleido/Choreo.
+2026-10-05 23:40:28,003 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:28,003 shutil.rmtree worked.
+2026-10-05 23:40:28,004 Cancelling tasks.
+2026-10-05 23:40:28,004 Exiting Kaleido/Choreo.
+2026-10-05 23:40:28,005 Could not set DPI metadata for ./results/step_1_raw_read_qc_nanoplot/barcode09/WeightedLogTransformed_HistogramReadlength.png: No module named 'PIL'
+2026-10-05 23:40:28,005 Saved ./results/step_1_raw_read_qc_nanoplot/barcode09/WeightedLogTransformed_HistogramReadlength.png as png (dpi=300)
+2026-10-05 23:40:28,019 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:28,019 shutil.rmtree worked.
+2026-10-05 23:40:28,019 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:28,019 shutil.rmtree worked.
+2026-10-05 23:40:28,036 Using last known good version of chrome
+2026-10-05 23:40:28,039 Chromium init'ed with kwargs {}
+2026-10-05 23:40:28,039 Found chromium path: /home/shoaib/.local/share/choreographer/deps/chrome-linux64/chrome
+2026-10-05 23:40:28,039 Temp directory created: /tmp/tmpzbukjt24.
+2026-10-05 23:40:28,039 Opening browser.
+2026-10-05 23:40:28,040 Temp directory created: /tmp/tmpz571c1q8.
+2026-10-05 23:40:28,040 Temporary directory at: /tmp/tmpz571c1q8
+2026-10-05 23:40:28,227 Conforming 1 to file:///tmp/tmpzbukjt24/index.html
+2026-10-05 23:40:31,093 Getting tab from queue (has 1)
+2026-10-05 23:40:31,093 Got 66FB
+2026-10-05 23:40:31,187 Reloading tab 66FB before return.
+2026-10-05 23:40:31,303 Putting tab 66FB back (queue size: 0).
+2026-10-05 23:40:31,303 Waiting for all cleanups to finish.
+2026-10-05 23:40:31,303 Exiting Kaleido.
+2026-10-05 23:40:31,303 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:31,304 shutil.rmtree worked.
+2026-10-05 23:40:31,304 Closing browser.
+2026-10-05 23:40:31,307 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:31,307 shutil.rmtree worked.
+2026-10-05 23:40:31,307 Closing browser.
+2026-10-05 23:40:31,307 Cancelling tasks.
+2026-10-05 23:40:31,307 Exiting Kaleido/Choreo.
+2026-10-05 23:40:32,339 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:32,340 shutil.rmtree worked.
+2026-10-05 23:40:32,340 Cancelling tasks.
+2026-10-05 23:40:32,340 Exiting Kaleido/Choreo.
+2026-10-05 23:40:32,342 Could not set DPI metadata for ./results/step_1_raw_read_qc_nanoplot/barcode09/Non_weightedHistogramReadlength.png: No module named 'PIL'
+2026-10-05 23:40:32,342 Saved ./results/step_1_raw_read_qc_nanoplot/barcode09/Non_weightedHistogramReadlength.png as png (dpi=300)
+2026-10-05 23:40:32,372 Using last known good version of chrome
+2026-10-05 23:40:32,375 Chromium init'ed with kwargs {}
+2026-10-05 23:40:32,375 Found chromium path: /home/shoaib/.local/share/choreographer/deps/chrome-linux64/chrome
+2026-10-05 23:40:32,375 Temp directory created: /tmp/tmp1_ydl0pi.
+2026-10-05 23:40:32,375 Opening browser.
+2026-10-05 23:40:32,376 Temp directory created: /tmp/tmpqnh8n58g.
+2026-10-05 23:40:32,376 Temporary directory at: /tmp/tmpqnh8n58g
+2026-10-05 23:40:32,583 Conforming 1 to file:///tmp/tmp1_ydl0pi/index.html
+2026-10-05 23:40:35,515 Getting tab from queue (has 1)
+2026-10-05 23:40:35,516 Got 9E6E
+2026-10-05 23:40:35,706 Reloading tab 9E6E before return.
+2026-10-05 23:40:35,836 Putting tab 9E6E back (queue size: 0).
+2026-10-05 23:40:35,836 Waiting for all cleanups to finish.
+2026-10-05 23:40:35,836 Exiting Kaleido.
+2026-10-05 23:40:35,837 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:35,837 shutil.rmtree worked.
+2026-10-05 23:40:35,837 Closing browser.
+2026-10-05 23:40:35,840 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:35,840 shutil.rmtree worked.
+2026-10-05 23:40:35,840 Closing browser.
+2026-10-05 23:40:35,840 Cancelling tasks.
+2026-10-05 23:40:35,840 Exiting Kaleido/Choreo.
+2026-10-05 23:40:37,121 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:37,122 shutil.rmtree worked.
+2026-10-05 23:40:37,122 Cancelling tasks.
+2026-10-05 23:40:37,122 Exiting Kaleido/Choreo.
+2026-10-05 23:40:37,124 Could not set DPI metadata for ./results/step_1_raw_read_qc_nanoplot/barcode09/Non_weightedLogTransformed_HistogramReadlength.png: No module named 'PIL'
+2026-10-05 23:40:37,124 Saved ./results/step_1_raw_read_qc_nanoplot/barcode09/Non_weightedLogTransformed_HistogramReadlength.png as png (dpi=300)
+2026-10-05 23:40:37,124 NanoPlot: Creating yield by minimal length plot for Read length.
+2026-10-05 23:40:37,804 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:37,804 shutil.rmtree worked.
+2026-10-05 23:40:37,804 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:37,804 shutil.rmtree worked.
+2026-10-05 23:40:39,355 Using last known good version of chrome
+2026-10-05 23:40:39,358 Chromium init'ed with kwargs {}
+2026-10-05 23:40:39,358 Found chromium path: /home/shoaib/.local/share/choreographer/deps/chrome-linux64/chrome
+2026-10-05 23:40:39,358 Temp directory created: /tmp/tmpfnqbpgc_.
+2026-10-05 23:40:39,358 Opening browser.
+2026-10-05 23:40:39,359 Temp directory created: /tmp/tmpuf_y_9rp.
+2026-10-05 23:40:39,359 Temporary directory at: /tmp/tmpuf_y_9rp
+2026-10-05 23:40:39,554 Conforming 1 to file:///tmp/tmpfnqbpgc_/index.html
+2026-10-05 23:40:42,714 Getting tab from queue (has 1)
+2026-10-05 23:40:42,714 Got ED1D
+2026-10-05 23:40:43,941 Reloading tab ED1D before return.
+2026-10-05 23:40:44,120 Putting tab ED1D back (queue size: 0).
+2026-10-05 23:40:44,120 Waiting for all cleanups to finish.
+2026-10-05 23:40:44,120 Exiting Kaleido.
+2026-10-05 23:40:44,120 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:44,120 shutil.rmtree worked.
+2026-10-05 23:40:44,120 Closing browser.
+2026-10-05 23:40:44,122 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:44,123 shutil.rmtree worked.
+2026-10-05 23:40:44,123 Closing browser.
+2026-10-05 23:40:44,123 Cancelling tasks.
+2026-10-05 23:40:44,123 Exiting Kaleido/Choreo.
+2026-10-05 23:40:45,449 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:45,449 shutil.rmtree worked.
+2026-10-05 23:40:45,449 Cancelling tasks.
+2026-10-05 23:40:45,449 Exiting Kaleido/Choreo.
+2026-10-05 23:40:45,450 Could not set DPI metadata for ./results/step_1_raw_read_qc_nanoplot/barcode09/Yield_By_Length.png: No module named 'PIL'
+2026-10-05 23:40:45,450 Saved ./results/step_1_raw_read_qc_nanoplot/barcode09/Yield_By_Length.png as png (dpi=300)
+2026-10-05 23:40:45,450 Created length plots
+2026-10-05 23:40:45,451 NanoPlot: Creating Read lengths vs Average read quality plots using 19473 reads.
+2026-10-05 23:40:45,500 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:45,501 shutil.rmtree worked.
+2026-10-05 23:40:45,518 Using last known good version of chrome
+2026-10-05 23:40:45,521 Chromium init'ed with kwargs {}
+2026-10-05 23:40:45,521 Found chromium path: /home/shoaib/.local/share/choreographer/deps/chrome-linux64/chrome
+2026-10-05 23:40:45,521 Temp directory created: /tmp/tmpps0spnzq.
+2026-10-05 23:40:45,521 Opening browser.
+2026-10-05 23:40:45,521 Temp directory created: /tmp/tmp1gxixqs6.
+2026-10-05 23:40:45,521 Temporary directory at: /tmp/tmp1gxixqs6
+2026-10-05 23:40:45,753 Conforming 1 to file:///tmp/tmpps0spnzq/index.html
+2026-10-05 23:40:50,371 Getting tab from queue (has 1)
+2026-10-05 23:40:50,371 Got 2575
+2026-10-05 23:40:51,588 Reloading tab 2575 before return.
+2026-10-05 23:40:51,770 Putting tab 2575 back (queue size: 0).
+2026-10-05 23:40:51,770 Waiting for all cleanups to finish.
+2026-10-05 23:40:51,770 Exiting Kaleido.
+2026-10-05 23:40:51,771 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:51,771 shutil.rmtree worked.
+2026-10-05 23:40:51,771 Closing browser.
+2026-10-05 23:40:51,773 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:51,773 shutil.rmtree worked.
+2026-10-05 23:40:51,773 Closing browser.
+2026-10-05 23:40:51,773 Cancelling tasks.
+2026-10-05 23:40:51,773 Exiting Kaleido/Choreo.
+2026-10-05 23:40:53,053 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:53,053 shutil.rmtree worked.
+2026-10-05 23:40:53,054 Cancelling tasks.
+2026-10-05 23:40:53,054 Exiting Kaleido/Choreo.
+2026-10-05 23:40:53,055 Could not set DPI metadata for ./results/step_1_raw_read_qc_nanoplot/barcode09/LengthvsQualityScatterPlot_dot.png: No module named 'PIL'
+2026-10-05 23:40:53,055 Saved ./results/step_1_raw_read_qc_nanoplot/barcode09/LengthvsQualityScatterPlot_dot.png as png (dpi=300)
+2026-10-05 23:40:53,088 Using last known good version of chrome
+2026-10-05 23:40:53,091 Chromium init'ed with kwargs {}
+2026-10-05 23:40:53,091 Found chromium path: /home/shoaib/.local/share/choreographer/deps/chrome-linux64/chrome
+2026-10-05 23:40:53,091 Temp directory created: /tmp/tmptbr2lamm.
+2026-10-05 23:40:53,092 Opening browser.
+2026-10-05 23:40:53,092 Temp directory created: /tmp/tmprt9rm50k.
+2026-10-05 23:40:53,092 Temporary directory at: /tmp/tmprt9rm50k
+2026-10-05 23:40:53,336 Conforming 1 to file:///tmp/tmptbr2lamm/index.html
+2026-10-05 23:40:56,301 Getting tab from queue (has 1)
+2026-10-05 23:40:56,301 Got EA80
+2026-10-05 23:40:56,888 Reloading tab EA80 before return.
+2026-10-05 23:40:57,013 Putting tab EA80 back (queue size: 0).
+2026-10-05 23:40:57,013 Waiting for all cleanups to finish.
+2026-10-05 23:40:57,013 Exiting Kaleido.
+2026-10-05 23:40:57,013 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:57,013 shutil.rmtree worked.
+2026-10-05 23:40:57,013 Closing browser.
+2026-10-05 23:40:57,017 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:57,017 shutil.rmtree worked.
+2026-10-05 23:40:57,017 Closing browser.
+2026-10-05 23:40:57,017 Cancelling tasks.
+2026-10-05 23:40:57,017 Exiting Kaleido/Choreo.
+2026-10-05 23:40:58,351 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:58,351 shutil.rmtree worked.
+2026-10-05 23:40:58,351 Cancelling tasks.
+2026-10-05 23:40:58,351 Exiting Kaleido/Choreo.
+2026-10-05 23:40:58,352 Could not set DPI metadata for ./results/step_1_raw_read_qc_nanoplot/barcode09/LengthvsQualityScatterPlot_kde.png: No module named 'PIL'
+2026-10-05 23:40:58,352 Saved ./results/step_1_raw_read_qc_nanoplot/barcode09/LengthvsQualityScatterPlot_kde.png as png (dpi=300)
+2026-10-05 23:40:58,353 Created LengthvsQual plot
+2026-10-05 23:40:58,353 Writing html report.
+2026-10-05 23:40:58,404 Finished!
+2026-10-05 23:40:58,463 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:58,463 shutil.rmtree worked.
+2026-10-05 23:40:58,463 TemporaryDirectory.cleanup() worked.
+2026-10-05 23:40:58,463 shutil.rmtree worked.

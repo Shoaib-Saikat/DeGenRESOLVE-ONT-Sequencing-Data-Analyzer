@@ -1,6 +1,6 @@
 {
   "bundle_date": "2026-08-25T07:42:52Z",
-  "app_version": "1.0.0",
+  "app_version": "1.0.1",
   "python": "Python 3.10.21",
   "samtools": "samtools 1.24",
   "bcftools": "bcftools 1.24",

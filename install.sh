@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-#  DeGenRESOLVE - Offline Installer  v1.0.0
+#  DeGenRESOLVE - Offline Installer  v1.0.1
 # =============================================================================
 #  Run on the TARGET machine.  NO internet connection required.
 #
@@ -24,7 +24,7 @@ set -euo pipefail
 
 BUNDLE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 APP_NAME="degenresolve"
-APP_VERSION="1.0.0"
+APP_VERSION="1.0.1"
 INSTALL_PREFIX="$HOME/${APP_NAME}"
 CONDA_INSTALL_DIR="$HOME/miniconda3"
 ENV_NAME="${APP_NAME}"
@@ -66,7 +66,7 @@ cat << 'BANNER'
      __   ___  __   ___         __    ___  ___  __              ___
     |  \ |___ | _  |___  |\ |  |__/  |___ [__  |  | |    |   | |___
     |__/ |___ |__] |___  | \|  |  \  |___ ___] |__| |___  \_/  |___
-  DeGenRESOLVE  ·  ONT Sequencing Data Analyzer  ·  Offline Installer  v1.0.0
+  DeGenRESOLVE  ·  ONT Sequencing Data Analyzer  ·  Offline Installer  v1.0.1
 BANNER
 echo -e "${NC}"
 echo -e "  ${BOLD}Bundle  :${NC} ${CYAN}${BUNDLE_DIR}${NC}"
@@ -347,19 +347,24 @@ chk_cmd python
 if [[ "$DRY_RUN" == false ]]; then
     # qualimap
     if chk_bin qualimap "${ENV_BIN}/qualimap"; then
-        QVER=$("${ENV_BIN}/qualimap" 2>&1 | grep -E -i 'QualiMap|version [0-9]' \
+        # --help and headless are both required: qualimap with no arguments launches its
+        # Java GUI and blocks forever on a machine with a display, hanging the installer with
+        # no output. timeout is the backstop. main_with_config.sh's _qmver does the same.
+        QVER=$(JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -Djava.awt.headless=true" \
+               timeout 30 "${ENV_BIN}/qualimap" --help 2>&1 \
+               | grep -E -i 'QualiMap|version [0-9]' \
                | grep -Eiv 'java|memory|warning|error' | head -1 | xargs || true)
         [[ -z "$QVER" ]] && QVER="installed"
         success "qualimap  ->  $QVER"; ((PASS++)) || true
     fi
     # java
     if chk_bin "java (openjdk)" "${ENV_BIN}/java"; then
-        JV=$("${ENV_BIN}/java" -version 2>&1 | head -1) || JV="installed"
+        JV=$(timeout 30 "${ENV_BIN}/java" -version 2>&1 | head -1) || JV="installed"
         success "java (openjdk)  ->  $JV"; ((PASS++)) || true
     fi
     # nanoplot
     if chk_bin NanoPlot "${ENV_BIN}/NanoPlot"; then
-        NV=$("${ENV_BIN}/NanoPlot" --version 2>&1 | head -1) || NV="installed"
+        NV=$(timeout 60 "${ENV_BIN}/NanoPlot" --version 2>&1 | head -1) || NV="installed"
         success "NanoPlot  ->  $NV"; ((PASS++)) || true
     fi
     # vcfutils.pl

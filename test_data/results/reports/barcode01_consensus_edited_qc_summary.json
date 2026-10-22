@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31 20:43:37",
+  "generated": "2026-10-05 23:44:18",
   "consensus_file": "./barcode01_consensus.fasta",
   "bam_file": "temp_barcode01/barcode01.bam",
   "reference_file": "./reference/infA_references.fasta",
@@ -18,8 +18,8 @@
     }
   },
   "total_sites_examined": 556,
-  "resolved_to_dominant_base": 220,
-  "retained_as_iupac": 164,
+  "resolved_to_dominant_base": 219,
+  "retained_as_iupac": 165,
   "converted_to_indel": 0,
   "indels_proposed_by_bcftools": 0,
   "indels_rejected_by_guard": 0,
@@ -51,7 +51,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 9,
-      "read_end_warnings": 8
+      "read_end_warnings": 8,
+      "read_identity_to_reference": 85.2,
+      "low_reference_identity": false
     },
     "N2_ON497150.1": {
       "total_degeneracies": 72,
@@ -60,7 +62,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 0,
-      "read_end_warnings": 1
+      "read_end_warnings": 1,
+      "read_identity_to_reference": 92.7,
+      "low_reference_identity": false
     },
     "PB2_OP023708.1": {
       "total_degeneracies": 67,
@@ -69,7 +73,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 2,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 87.6,
+      "low_reference_identity": false
     },
     "PB1_OP028538.1": {
       "total_degeneracies": 92,
@@ -78,7 +84,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 3,
-      "read_end_warnings": 5
+      "read_end_warnings": 5,
+      "read_identity_to_reference": 85.4,
+      "low_reference_identity": false
     },
     "PA_OP023666.1": {
       "total_degeneracies": 96,
@@ -87,7 +95,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 5,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 88.2,
+      "low_reference_identity": false
     },
     "MP_OP023633.1": {
       "total_degeneracies": 11,
@@ -96,7 +106,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 1,
-      "read_end_warnings": 1
+      "read_end_warnings": 1,
+      "read_identity_to_reference": 86.6,
+      "low_reference_identity": false
     },
     "NP_OM938209.1": {
       "total_degeneracies": 36,
@@ -105,16 +117,20 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 0,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 87.9,
+      "low_reference_identity": false
     },
     "NS_OP023561.1": {
       "total_degeneracies": 28,
-      "resolved": 27,
-      "kept": 1,
+      "resolved": 26,
+      "kept": 2,
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 3,
-      "read_end_warnings": 1
+      "read_end_warnings": 1,
+      "read_identity_to_reference": 88.0,
+      "low_reference_identity": false
     }
   }
 }

@@ -1,6 +1,6 @@
 CONSENSUS DEGENERACY RESOLUTION LOG
 ========================================================================================================================================================================================================
-Generated: 2026-08-31 20:42:11
+Generated: 2026-10-05 23:42:46
 Consensus File: ./barcode09_consensus.fasta
 Reference File: ./reference/infA_references.fasta
 BAM File: temp_barcode09/barcode09.bam
@@ -18,14 +18,14 @@ Strict Read-End: False
 
 SEGMENT MAPPING:
 ------------------------------------------------------------
-H5_OP023667.1 -> H5_OP023667.1
-N1_NC_007361.1 -> N1_NC_007361.1
-PB2_OP023708.1 -> PB2_OP023708.1
-PB1_OP028538.1 -> PB1_OP028538.1
-PA_OP023666.1 -> PA_OP023666.1
-NP_OM938209.1 -> NP_OM938209.1
-MP_OP023633.1 -> MP_OP023633.1
-NS_OP023561.1 -> NS_OP023561.1
+H5_OP023667.1 -> H5_OP023667.1 | read identity to reference: 86.8%
+N1_NC_007361.1 -> N1_NC_007361.1 | read identity to reference: 85.8%
+PB2_OP023708.1 -> PB2_OP023708.1 | read identity to reference: 90.3%
+PB1_OP028538.1 -> PB1_OP028538.1 | read identity to reference: 88.9%
+PA_OP023666.1 -> PA_OP023666.1 | read identity to reference: 87.7%
+NP_OM938209.1 -> NP_OM938209.1 | read identity to reference: 90.7%
+MP_OP023633.1 -> MP_OP023633.1 | read identity to reference: 88.9%
+NS_OP023561.1 -> NS_OP023561.1 | read identity to reference: 89.6%
 
 Segment	Cons_Pos	Genomic_Pos	Original	New	Status	Coverage	Usable_Coverage	A	C	G	T	INS	DEL	Major_Base	Second_Base	Major_AF%	Second_AF%	Delta%	Fwd	Rev	Strand_Balance	HP_Len	HP_Dist	ReadEnd_Score	Warnings	Decision	Reason
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

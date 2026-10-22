@@ -1,5 +1,62 @@
 # Changelog
 
+## 1.0.1 - changes from the validation against Illumina-derived genomes (2026-10-22)
+
+Three changes that came out of testing the pipeline on isolates sequenced on both Nanopore and
+Illumina platforms (BioProject PRJNA1173216). **The first and the third can change pipeline
+output**, which is why the version is bumped. Results obtained under the hac profile change
+only through the first.
+
+### Changed: consensus refinement
+
+- **A position is not resolved when deletions make up 30% or more of the column.** The
+  fraction is deletion-carrying reads divided by deletion-carrying reads plus usable bases,
+  the same fraction that already defines the columns listed as indel evidence not acted upon.
+  At such a column the bases that remain come from a minority of the reads, so the ambiguity
+  code is kept and the log records the deletion fraction. On the validation isolates this
+  turned six incorrect bases into ambiguity codes and introduced none.
+  (`pipeline/consensus_editor.py`)
+
+- **Read identity to each reference is reported per segment, with a warning below 85%.**
+  The identity is computed from the gap-compressed divergence Minimap2 attaches to each
+  primary alignment, weighted by aligned length. It appears in the console, the diagnostic
+  log and the QC summary. It changes no base. It is computed over the aligned part of the
+  reads only, so the absence of a warning is not an assurance.
+  (`pipeline/consensus_editor.py`)
+
+### Fixed: indel calling under the sup profile
+
+- **No indel was ever proposed at a position covered by more than 250 reads.**
+  `bcftools mpileup` skips indel calling where depth exceeds `--max-idepth`, which defaults
+  to 250. The pipeline raised the pileup depth (`-d`, Depth per Site, 10,000 by default) for
+  amplicon data but left this limit alone, so with the Minimum Coverage Threshold of 100 the
+  indel adjudication could act only between 100 and 250 reads. The sup flag set now passes
+  `--max-idepth 1000000000`, a limit the pileup cannot reach, and the value is written to the
+  mpileup provenance file. Setting it equal to Depth per Site is not enough: where the reads
+  saturate the pileup the depth equals or slightly exceeds `-d`, and bcftools skips the
+  indel again. `-d` already bounds the work. The hac profile is unaffected: it passes `-I`
+  and calls no indel.
+  (`scripts/combined_consensus_script.sh`, `tests/test_indel_depth_cap.py`)
+
+### Fixed: installer
+
+- **`install.sh` in the repository could hang at the Qualimap check on a machine with a
+  display.** Qualimap started with no arguments opens its Java window and waits. The offline
+  bundle of 1.0.0 already shipped the corrected installer, which probes Qualimap with
+  `--help` under headless Java and puts a timeout on the Qualimap, Java and NanoPlot checks;
+  the repository copy had not been updated. The two are now the same file. (`install.sh`)
+
+### Changed: demo dataset
+
+- `test_data/results` and `test_data/log` were regenerated with this version: the same reads
+  and configuration, run from a fresh installation of the 1.0.1 offline bundle, whose tool
+  environment is the one shipped with 1.0.0. Alignments, variant calls and draft consensus
+  are unchanged. The refined consensus differs at one position: barcode01, NS 645, `G` in
+  1.0.0 and `R` now, because 30% of the reads carry a deletion there. The diagnostic logs and
+  QC summaries gain the read-identity line.
+- The READMEs quoted the soft-masked share of the demo as 0.3% and 60.2%. The outputs give
+  0.0% and 60.1%, in 1.0.0 as now; the text is corrected.
+
 ## 1.0.0 - post-release fixes (2026-09-08)
 
 These were made after the v1.0.0 tag was published and are included in the release bundle

@@ -52,8 +52,8 @@ read first are in `results/reports/<barcode>_summary_report.html`:
   real composition and a single-subtype sample does not appear mixed.
 
 **Case in the consensus FASTA carries meaning: lowercase = low confidence** (depth < 3 or
-quality < 10), preserved from vcf2fq. In this dataset `barcode01` comes out 0.3%
-soft-masked and `barcode09` **60.2%** - use that to judge the sample before trusting its
+quality < 10), preserved from vcf2fq. In this dataset `barcode01` comes out 0.0%
+soft-masked and `barcode09` **60.1%** - use that to judge the sample before trusting its
 sequence. Uppercase with `seqtk seq -U` before archive submission.
 
 `reference/infA_references.fasta` uses the `H5_`/`N1_` naming convention. The `HA_`/`NA_`

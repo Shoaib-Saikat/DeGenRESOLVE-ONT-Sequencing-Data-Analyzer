@@ -30,7 +30,7 @@ def main():
     QApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
     app = QApplication(sys.argv)
     app.setApplicationName("DeGenRESOLVE")
-    app.setApplicationVersion("1.0.0")
+    app.setApplicationVersion("1.0.1")
     
     # Create and show the main window
     window = ONTSequencingAnalyzer()

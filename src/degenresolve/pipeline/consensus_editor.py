@@ -119,6 +119,23 @@ def compute_strand_balance(strand_counts: dict, major_base: str) -> float:
     return min(fwd, rev) / mx if mx > 0 else 0.0
 
 
+def read_identity_to_reference(bam_handle, ref_name: str):
+    """Mean identity of the reads to one reference, in percent; None when it cannot be measured.
+
+    Averages minimap2's gap-compressed divergence (the `de` tag) over primary alignments,
+    weighted by aligned read length. Taken from the reads, not from the consensus: where
+    mapping fails the consensus drifts toward the reference and looks closer than it is.
+    """
+    matched = aligned = 0.0
+    for read in bam_handle.fetch(ref_name):
+        if read.is_secondary or read.is_supplementary or not read.has_tag('de'):
+            continue
+        n = read.query_alignment_length
+        matched += (1.0 - read.get_tag('de')) * n
+        aligned += n
+    return 100.0 * matched / aligned if aligned else None
+
+
 def html_escape(value) -> str:
     """Escape a value for safe interpolation into generated HTML.
 
@@ -911,6 +928,36 @@ class ConsensusDegeneracyProcessor:
         
         return base_counts, total_coverage, skipped_reads, strand_counts
 
+    # ponytail: fixed threshold, calibrated on R10.4.1 hac reads against Illumina-derived
+    # genomes (BioProject PRJNA1173216): segments below it held 656 of 695 incorrect consensus
+    # bases. Read identity includes sequencing error, so a noisier chemistry needs a lower
+    # value; make it a parameter when one turns up.
+    REFERENCE_IDENTITY_WARN = 85.0
+
+    def _identity_warning(self, identity) -> str:
+        """Text to show beside a segment whose reads are far from its reference, else ''."""
+        if identity is None or identity >= self.REFERENCE_IDENTITY_WARN:
+            return ""
+        return (f"WARNING: reads are {identity:.1f}% identical to this reference, below "
+                f"{self.REFERENCE_IDENTITY_WARN:.0f}%; consensus bases on this segment may be "
+                f"wrong - map to a closer reference")
+
+    def _segment_identity(self, ref_name):
+        """read_identity_to_reference for one reference, measured once per run."""
+        cache = self.__dict__.setdefault('_identity_cache', {})
+        if ref_name not in cache:
+            try:
+                cache[ref_name] = read_identity_to_reference(self.bam_file_handle, ref_name)
+            except (ValueError, KeyError, AttributeError):   # no BAM, or reference not in it
+                cache[ref_name] = None
+        return cache[ref_name]
+
+    def _identity_line(self, ref_name) -> str:
+        identity = self._segment_identity(ref_name)
+        if identity is None:
+            return "read identity to reference: not measured"
+        return f"read identity to reference: {identity:.1f}% {self._identity_warning(identity)}".rstrip()
+
     def _allele_set_violation(self, analysis, top_base, degeneracy_code, top_percentage):
         """True when the majority base falls outside the ambiguity code's own allele set.
 
@@ -967,6 +1014,21 @@ class ConsensusDegeneracyProcessor:
                 'decision': 'KEEP',
                 'reason': (f'Coverage too low ({usable_coverage} usable of '
                            f'{total_coverage} reads < {self.min_coverage})')
+            })
+            return analysis
+
+        # A column where many reads carry a deletion is an alignment gap, and the bases
+        # left in it are not evidence for a call. Scored against Illumina-derived genomes
+        # (BioProject PRJNA1173216), all four positions resolved at such columns (90-96%
+        # deletions) were wrong. Same threshold as the indel-evidence sweep. The reason
+        # starts with "Ambiguous" so the QC summary counts it as a retained code.
+        deletions = base_counts.get('DEL', 0)
+        if deletions / (deletions + usable_coverage or 1) >= self.INDEL_EVIDENCE_MIN_FRACTION:
+            analysis.update({
+                'decision': 'KEEP',
+                'reason': (f'Ambiguous: deletion in {100 * deletions / (deletions + usable_coverage):.1f}% '
+                           f'of reads ({deletions} of {deletions + usable_coverage}); '
+                           f'the remaining bases are not used for a call')
             })
             return analysis
 
@@ -1604,7 +1666,7 @@ class ConsensusDegeneracyProcessor:
             log_file.write("SEGMENT MAPPING:\n")
             log_file.write("-" * 60 + "\n")
             for cons_seg, ref_seg in self.segment_mapping.items():
-                log_file.write(f"{cons_seg} -> {ref_seg}\n")
+                log_file.write(f"{cons_seg} -> {ref_seg} | {self._identity_line(ref_seg)}\n")
             log_file.write("\n")
 
             # Enriched per-site table
@@ -1751,7 +1813,7 @@ class ConsensusDegeneracyProcessor:
         # Show mapping only for processed segments
         for cons_seg in self.processing_stats.keys():
             ref_seg = self.segment_mapping.get(cons_seg, 'N/A')
-            print(f"  {cons_seg} -> {ref_seg}")
+            print(f"  {cons_seg} -> {ref_seg} | {self._identity_line(ref_seg)}")
     
     def _build_qc_summary(self) -> dict:
         """Build a deterministic QC summary dict from processing results."""
@@ -1810,6 +1872,10 @@ class ConsensusDegeneracyProcessor:
                 'homopolymer_warnings': stats.get('homopolymer_count', 0),
                 'read_end_warnings': stats.get('read_end_enrichment_count', 0),
             }
+            identity = self._segment_identity(self.segment_mapping.get(seg_id, seg_id))
+            per_segment[seg_id]['read_identity_to_reference'] = (
+                round(identity, 1) if identity is not None else None)
+            per_segment[seg_id]['low_reference_identity'] = bool(self._identity_warning(identity))
 
         return {
             'generated': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),

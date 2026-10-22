@@ -3,14 +3,14 @@ Display:
 Java memory size is set to 1200M
 Launching application...
 
-Picked up JAVA_TOOL_OPTIONS:  -Djava.awt.headless=true -Djava.awt.headless=true
+Picked up JAVA_TOOL_OPTIONS:  -Djava.awt.headless=true
 QualiMap v.2.2.2-dev
 Built on 2016-12-11 14:41
 
 Selected tool: bamqc
 Available memory (Mb): 35
 Max memory (Mb): 1258
-Mon Aug 31 20:41:59 GMT+06:00 2026		WARNING	Output folder already exists, the results will be saved there
+Mon Oct 05 23:42:38 GMT+06:00 2026		WARNING	Output folder already exists, the results will be saved there
 
 Starting bam qc....
 Loading sam header...

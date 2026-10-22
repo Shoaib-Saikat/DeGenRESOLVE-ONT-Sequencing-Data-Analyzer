@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31 20:42:11",
+  "generated": "2026-10-05 23:42:46",
   "consensus_file": "./barcode09_consensus.fasta",
   "bam_file": "temp_barcode09/barcode09.bam",
   "reference_file": "./reference/infA_references.fasta",
@@ -51,7 +51,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 106,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 86.8,
+      "low_reference_identity": false
     },
     "N1_NC_007361.1": {
       "total_degeneracies": 1,
@@ -60,7 +62,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 0,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 85.8,
+      "low_reference_identity": false
     },
     "PB2_OP023708.1": {
       "total_degeneracies": 1562,
@@ -69,7 +73,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 15,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 90.3,
+      "low_reference_identity": false
     },
     "PB1_OP028538.1": {
       "total_degeneracies": 0,
@@ -78,7 +84,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 0,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 88.9,
+      "low_reference_identity": false
     },
     "PA_OP023666.1": {
       "total_degeneracies": 954,
@@ -87,7 +95,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 15,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 87.7,
+      "low_reference_identity": false
     },
     "MP_OP023633.1": {
       "total_degeneracies": 83,
@@ -96,7 +106,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 4,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 88.9,
+      "low_reference_identity": false
     },
     "NP_OM938209.1": {
       "total_degeneracies": 7,
@@ -105,7 +117,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 0,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 90.7,
+      "low_reference_identity": false
     },
     "NS_OP023561.1": {
       "total_degeneracies": 91,
@@ -114,7 +128,9 @@
       "resolved_to_deletion": 0,
       "strand_bias_warnings": 0,
       "homopolymer_warnings": 2,
-      "read_end_warnings": 0
+      "read_end_warnings": 0,
+      "read_identity_to_reference": 89.6,
+      "low_reference_identity": false
     }
   }
 }
